@@ -1,0 +1,3481 @@
+@charset "utf-8";
+/**
+* Description: Base style 
+* Developers: xiaochen <xiaochen2@leju.com>
+**/
+body {
+	min-width: 320px; /*-webkit-tap-highlight-color: rgba(0, 0, 0, 0);*/
+	font-size: 14px;
+	-webkit-text-size-adjust: none;
+}
+
+input {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	vertical-align: middle;
+}
+
+input,a {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+/**************************************
+appearance
+**************************************/
+.cUlLogin .remb input,.cBuyConf li div select,textarea,.cUlPass select,input[type="button"]
+	{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+/**************************************
+background - icon
+**************************************/
+.cIcon {
+	width: 40px;
+	height: 40px;
+	background: url(../img/sprite_icon.png) no-repeat 0 0;
+	-webkit-background-size: 320px 200px;
+	background-size: 320px 200px;
+}
+
+.colorfff {
+	color: #fff !important;
+}
+
+/**************************************
+public
+**************************************/
+.cGrayBg {
+	background-color: #f0f0f0 !important;
+}
+
+.cFixedHeadWrap {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	background-color: #f0f0f0;
+}
+
+.cFixedHeadWrap .cFixedHead {
+	position: relative;
+	/* background-color: #65a044; */
+	background-color: #DF207A;
+	/* box-shadow: 0 0 5px #000; */
+	/* box-shadow: 0 0 5px #DF207A; */
+}
+/*cFixedHead*/
+.cFixedHead {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+	/* background-color: #65a044;
+	border-bottom: 1px solid #5e953f; */
+	background-color: #DF207A;
+	border-bottom: 1px solid #DF207A;
+	overflow: hidden;
+	max-height: 3.43em;
+	/* box-shadow: 0 0 5px #DF207A; */
+}
+
+.cFixedHead h1 {
+	padding: 0.48em;
+	font-size: 1.28em;
+	font-weight: bold;
+	font-family: 'SimHei';
+	letter-spacing: 1px;
+	color: #fff;
+	text-align: center;
+}
+
+.cFixedHead .btnR,.cFixedHead .btnRet {
+	font-family: 'Microsoft YaHei';
+	z-index: 10;
+	position: absolute;
+	left: 10px;
+	top: 50%;
+	color: #fff;
+	font-size: 1.14em;
+	padding: 0.8em 1em;
+}
+
+.cFixedHead .btnRet::before {
+	content: "";
+	position: absolute;
+	left: 0.2em;
+	top: 50%;
+	width: 0.5em;
+	height: 0.5em;
+	border-left: 0.15em solid #fff;
+	border-top: 0.15em solid #fff;
+	margin-top: -0.25em;
+}
+
+.cFixedHead .btnR {
+	right: 0;
+	left: auto;
+	padding-right: 0.2em;
+	color: transparent;
+	font-size: 1em;
+	background: url(../img/mine1.png) no-repeat center center;
+}
+
+.cFixedHeadTmp {
+	height: 45px;
+}
+
+.cFixedHead .btnR,.cFixedHead .cMine {
+	z-index: 10;
+	display: block;
+	position: absolute;
+	right: 0.5em;
+	top: 0.5em;
+	bottom: 0.5em;
+	width: 2.5em;
+	height: auto;
+	background: url(../img/mine1.png) no-repeat center center;
+}
+
+.cFixedHead .btnR {
+	padding: 0;
+	background-position: center center;
+}
+
+.cFixedHead .cSlogo {
+	position: absolute;
+	top: 50%;
+	left: 1em;
+	z-index: 1;
+}
+
+.cSlogo {
+	height: 1.35em;
+	width: 4em;
+	background: url(../img/slogo1.png) no-repeat 0 0;
+}
+
+.cSearch {
+	position: relative;
+	display: block;
+	z-index: 20;
+	overflow: hidden;
+	position: relative;
+	margin: 0.5em 3.42em 0.5em 0.42em;
+	padding: 0.3em 0.8em;
+	border: 1px solid #d4d4d4;
+	background-color: #fafafa;
+}
+/*.cSearch::after{ content: ''; position: absolute; z-index: 100; top: 50%; right: 1em; width: 1em; height: 1em; margin-top: -0.5em;}*/
+/*.cSearchIng{ margin: 0.5em; }*/
+.cSearch input {
+	position: relative;
+	z-index: 1;
+	display: block;
+	width: 100%;
+	height: 1.71em;
+	line-height: 1.71em;
+	border: none;
+	background-color: #fafafa;
+}
+
+.cHeadSearch .cSearch {
+	display: block;
+}
+
+.cHeadSearch .categoryTit {
+	display: none;
+}
+
+.trunTypes,.cSearchBtn {
+	position: absolute;
+	z-index: 30;
+	right: 0.2em;
+	top: 0.15em;
+	bottom: 0.5em;
+	width: 2.9em;
+	height: 2.1em;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
+	background: url(../img/search_icon1.png) no-repeat #65a044 center;
+}
+
+input.cSearchBtn {
+	border: none;
+	padding: 0;
+}
+
+.trunTypes {
+	display: none;
+	background-image: url(../img/mine2.png);
+}
+
+/*category*/
+.categoryTit {
+	font-size: 1.5em;
+	height: 2.3em;
+	line-height: 2.3em;
+	color: #fff;
+	text-align: center;
+	margin: 0 3em;
+}
+
+.categoryTit span {
+	display: inline-block;
+	position: relative;
+	padding-right: 1.25em;
+}
+
+.categoryTit span::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0.6em;
+	height: 0.6em;
+	margin-top: -0.55em;
+	border-bottom: 2px solid #fff;
+	border-left: 2px solid #fff;
+}
+
+.categoryTit .cur::after {
+	margin-top: -0.225em;
+}
+
+.categoryList {
+	background-color: #f2f2f2;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 200;
+	height: 24em;
+	overflow: hidden;
+	border-bottom: 1px solid #d0cdcd;
+}
+
+.categoryList .types {
+	position: relative;
+	overflow: hidden;
+}
+
+.categoryList .types a {
+	float: left;
+	width: 33.3%;
+	height: 6em;
+	padding: 1em 0;
+	text-align: center;
+	border-left: 1px solid #d0cdcd;
+	border-top: 1px solid #d0cdcd;
+	margin: -1px 0 0 -1px;
+	color: #333;
+}
+
+.categoryList .types a img {
+	width: 6em;
+	height: 4.07em;
+	vertical-align: middle;
+}
+
+.categoryList .types a span {
+	display: block;
+}
+
+.categoryList .types a strong {
+	margin-top: 2em;
+	display: block;
+	color: #a4a4a4;
+}
+
+.categoryList .types a em {
+	display: block;
+	color: #ea4340;
+}
+
+.cMenu_add_goods {
+	display: inline-block;
+	width: 6em;
+	height: 4.07em;
+	background: url(../img/addgoods.png) no-repeat 0 0;
+}
+
+.return-btn {
+  z-index: 10;
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 0.65em;
+}
+
+.return-btn .return {
+  position: absolute;
+  width: 19px;
+  height: 17px;
+}
+
+.cFixedHead .clearAll {
+	background: none;
+	color: #fff;
+	height: 3em;
+	font-size: 1.14em;
+	padding-right: 0;
+	padding-left: 0.5em;
+	margin-top: -1.5em;
+	bottom: auto;
+	text-align: center;
+	top: 50%;
+	line-height: 3;
+}
+
+.cFixedHead .clearAll::before {
+	display: none;
+}
+
+.cFixedHead .btnR,.cFixedHead .cMine,.trunTypes,.cSearchBtn {
+	-webkit-background-size: 2.07em 2.07em;
+	background-size: 2.07em 2.07em;
+}
+
+/*search*/
+.cSearchInfo {
+	padding: 10% 0;
+}
+
+.cSearchInfo p.searchIfo {
+	color: #cfcfcf;
+	line-height: 2em;
+	text-align: center;
+}
+
+.cSearchInfo p.newOrder {
+	margin: 1em 2em;
+	background-color: #f1bf2c;
+	height: 2em;
+	line-height: 2em;
+	font-size: 25px;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: 1px 1px 3px #ccc;
+	cursor: pointer;
+}
+
+/*pop*/
+.cFixedPop {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 99999;
+}
+
+.cFixedPopCon {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 18.4em;
+	background-color: #fff;
+	padding: 1.2em 0.8em;
+}
+
+.cJcBot,.cJcTop {
+	position: absolute;
+	top: -4px;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: url(../img/icon_jc.png) repeat-x 0 0;
+	-webkit-background-size: 28px 7px;
+	background-size: 28px 7px;
+}
+
+.cJcBot {
+	top: auto;
+	bottom: -3px;
+	background-position: left bottom;
+}
+
+.cJcTop::after,.cJcBot::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 8px;
+	width: 4px;
+	background-color: #fff;
+}
+
+.cJcBot::after {
+	bottom: 0;
+	top: auto;
+}
+
+.cFixedClosed {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	width: 1.2em;
+	height: 1.2em;
+	text-indent: -99999px;
+	background-color: #fff;
+	overflow: hidden;
+}
+
+.cFixedClosed::after,.cFixedClosed::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+	height: 0;
+	border: 1px solid #f34946;
+	margin-top: -1px;
+	z-index: 999;
+}
+
+/*cFixedMyMenu*/
+.cFixedMenuBoxC,.cFixedMenuBoxB,.cFixedMenuBox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.8);
+	z-index: 999999;
+}
+
+.cFixedMenu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 80%;
+	background-color: #fff;
+	-webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.cFixedMenu1 {
+	position: absolute;
+	top: 0;
+	left: 20%;
+	bottom: 0;
+	width: 80%;
+	height: 50%;
+}
+
+.cFixedMenu2 {
+	position: absolute;
+	top: 0;
+	left: 10%;
+	bottom: 0;
+	width: 80%;
+}
+
+.cFixedMenuBoxB .cFixedMenuIndexInner {
+	position: absolute;
+	top: 1.1em;
+	left: 0;
+	bottom: 0;
+	width: 90%;
+	background-color: #fff;
+	-webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+	border: 1px solid #CCC;
+}
+
+.cFixedMenuBoxB .cFixedMenuIndexInner::after {
+	content: "";
+	border-color: transparent #fff transparent transparent;
+	border-style: solid;
+	border-width: 10px 25px 20px 0;
+	position: absolute;
+	right: 10px;
+	top: -10px;
+}
+
+.cFixedMenuBoxC .cFixedMenuIndexInner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #fff;
+	-webkit-box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 0 5px rgba(0, 0, 0, 0.2);
+	border: 1px solid #CCC;
+}
+/*.cFixedMenuBoxC .cFixedMenuIndexInner::after{content: "" ;border-color: transparent #fff transparent transparent;  border-style: solid;  border-width: 10px 25px 20px 0;
+  position: absolute;right: 10px; top: -10px; }*/
+.cFixedMenuBoxB,.cFixedMenuBoxC {
+	background-color: transparent;
+}
+
+.cFixedMenuBoxC,.cFixedMenuBoxB .cFixedMenu {
+	top: 3.5em;
+}
+
+.cFixedMenuBoxB .cFixedMenu1 {
+	top: 2.5em;
+}
+
+.cFixedMenuBoxB .cFixedClosed {
+	display: none;
+}
+
+/*cMenu*/
+.cMenu {
+	overflow: hidden;
+	width: 100%;
+	background-color: #ffffff;
+	border-bottom: 1px solid #c8c6c7;
+}
+
+.cMenu ul {
+	position: relative;
+	width: 10000px;
+	overflow: hidden;
+	font-size: 0.85em;
+	background-color: #ffffff;
+	text-align: center;
+	padding: 0 0.7em;
+}
+
+.cMenu li {
+	float: left;
+	padding: 0.8em 0;
+}
+
+.cMenu .short {
+	width: 12%;
+}
+
+.cMenu li a {
+	position: relative;
+	white-space: nowrap;
+	font-size: 1em;
+	color: #666666;
+	padding: 0.2em 0.9em;
+	display: inline-block;
+	background-color: #fff;
+}
+/*.cMenu li a::before{ content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 0; overflow: hidden; border: 0.1em solid #fff; }
+.cMenu .cur a::before{  border: 0.1em solid #65a044; }*/
+.cMenu .cur a {
+	color: #fff;
+	/* background-color: #65a044; */
+	background-color: #DF207A;
+}
+
+/*cMenuList*/
+.cMenuList {
+	overflow: hidden;
+	width: 100%;
+	background-color: #ffffff;
+	border-bottom: 1px solid #c8c6c7;
+}
+
+.cMenuList ul {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	font-size: 0.85em;
+	background-color: #ffffff;
+	text-align: center;
+	padding: 0 0.7em;
+}
+
+.cMenuList li {
+	float: left;
+	padding: 0.8em 0;
+	width: 40%;
+}
+
+.cMenuList li a {
+	position: relative;
+	white-space: nowrap;
+	font-size: 1em;
+	color: #666666;
+	padding: 0.2em 0.9em;
+	display: inline-block;
+	background-color: #fff;
+}
+
+.cMenuList .cur a {
+	color: #f0da0a;
+}
+
+.cMenu ul,.cMenuList ul {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+}
+
+/*cQuickMenu*/
+.cQuickMenu {
+	position: relative;
+	overflow: hidden;
+	padding: 1em 0;
+	border-bottom: 1px solid #d0cdcd;
+}
+
+.cQuickMenu ul {
+	overflow: hidden;
+}
+
+.cQuickMenu li {
+	float: left;
+	width: 25%;
+}
+
+.cQuickMenu li a {
+	position: relative;
+	display: block;
+	width: 3.71em;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.cQuickMenu li span {
+	display: table-cell;
+	vertical-align: middle;
+	width: 3.71em;
+	height: 3.71em;
+	/* background: #65a044; */
+	background: #DF207A;
+	color: #fff;
+}
+
+.cQuickMenu li span img {
+	width: 2.14em;
+	height: 2.14em;
+}
+
+.cQuickMenu li a strong {
+	font-size: 0.8em;
+	color: #333;
+}
+
+.cQuickMenu li a:active span,.cQuickMenu li.cur a span {
+	background-color: #f34c49;
+	
+	/* #65A044 */
+}
+
+.cQuickMenu li a:active strong,.cQuickMenu li.cur a strong {
+	color: #f34946;
+}
+
+.cHui {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 0.5em;
+	background-color: #f34946;
+	font-size: 0.7em;
+	height: 1em;
+	width: 1em;
+	overflow: hidden;
+	line-height: 1;
+	text-align: center;
+	color: #fff;
+}
+
+.cQuickMenuTip {
+	padding: 0.2em 0;
+	background-color: #f1f1f1;
+	text-align: center;
+	border-bottom: 1px solid #d0cdcd;
+}
+
+.cQuickMenuTip span {
+	display: inline-block;
+	padding: 0.5em 0 0.5em 2em;
+	font-size: 0.8em;
+	background: url(../img/icon_tip.png) no-repeat left center;
+	-webkit-background-size: 1.5em 1.5em;
+	background-size: 1.5em 1.5em;
+}
+
+.cQuickQuess {
+	padding: 1em 0 0;
+}
+
+.cQuickQuess h2 {
+	font-size: 1.2em;
+	margin-bottom: 1em;
+}
+
+.cQuickMenu .mark {
+	display: none;
+	z-index: 100;
+	background-color: transparent;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+/*cFixedFoot*/
+.touch-float-car {
+  position: fixed;
+  bottom: 1.25rem;
+  width: 2.8125rem;
+  height: 2.8125rem;
+  display: block;
+  border-radius: 2.8125rem;
+  z-index: 18;
+  left: 1.25rem;
+  text-align: left;
+  background: rgba(237, 20, 91, 0.8);
+}
+.touch-float-car img {
+  width: 1.25rem;
+  margin: .875rem 0 0 .6875rem;
+}
+.cFixedFoot {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 9999;
+}
+
+.cFixedFoot .detail2,.cFixedFoot .detail {
+	margin: 1em 7em 1em 7em;
+	font-size: 1em;
+	color: #FFF;
+	text-align: center;
+}
+
+.cFixedFoot .detail p {
+	display: inline-block;
+	margin: 0 0.1em;
+}
+
+.cFixedFoot .detail .p1 span {
+	display: inline-block;
+	line-height: 1;
+	border-left: 1px solid #fff;
+	width: 3em;
+	border-right: 1px solid #fff;
+	padding: 0 0.2em;
+	color: #ffe99c;
+}
+
+.cFixedFoot .detail .p2 strong {
+	font-size: 1.14em;
+	font-family: 'Microsoft YaHei';
+	color: #ffe99c;
+}
+
+.cFixedFoot .detail2 {
+	overflow: hidden;
+	text-align: left;
+	margin: 0.6em 0;
+	padding-left: 0.7em;
+}
+
+.cFixedFoot .detail2 .p2 {
+	float: left;
+	font-size: 1em;
+	padding-top: 0.5em;
+}
+
+.cFixedFoot .detail2 .p2 strong {
+	font-size: 1em;
+	font-family: 'Microsoft YaHei';
+	color: #f3c938;
+}
+
+.cFixedFoot .detail2 .p2 em {
+	font-size: 0.85em;
+}
+
+.cFixedFoot .detail2 .p3 {
+	float: left;
+	font-size: 0.85em;
+	color: #f3c938;
+	margin-left: 1em;
+}
+
+.cFixedFoot h2 {
+	position: absolute;
+	left: 0.7em;
+	top: 50%;
+	padding-left: 1.2em;
+	margin-left: 1em;
+}
+
+.cFixedFoot h2::before {
+	content: "";
+	position: absolute;
+	left: -1em;
+	top: 50%;
+	width: 2.1em;
+	height: 2.1em;
+	background: url(../img/icon_car1.png) no-repeat 0 0;
+}
+
+.cFixedFoot .cCheckMore {
+	position: absolute;
+	left: 0.7em;
+	top: 50%;
+	width: auto;
+	padding: 1em 1em;
+	font-size: 0.85em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.cFixedFoot .cNextStep {
+	position: absolute;
+	right: 0.7em;
+	top: 50%;
+	width: auto;
+	padding: 0.8em 1.5em;
+	font-size: 0.85em;
+	font-weight: bold;
+	margin: 0;
+}
+
+/**************************************
+shu cai list
+**************************************/
+.cSCList {
+	background-color: #fff;
+	/* margin-bottom: 6.5em; */
+	margin-bottom: 2em;
+	padding-bottom: 2em;
+}
+
+.cSCList .ulbd {
+	border-top: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.cSCList .ulbd li:last-child {
+	border-bottom: none;
+}
+
+.cSCType {
+	background-color: #f0f0f0;
+	font-size: 0.85em;
+	padding: 0.5em 1em;
+	color: #333;
+	font-weight: bold;
+}
+
+.cSCList>ul {
+	/* padding: 0 0.7em; */
+}
+
+.cSCList .li {
+	position: relative;
+	padding: 1em 0;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.cSCList .li .pic {
+	position: relative;
+	float: left;
+	width: 4.71em;
+	height: 3.79em;
+}
+
+.cSCList .li .picBuy::before {
+	content: '';
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.3) url(../img/buyed.png) no-repeat 3em 2.5em;
+	-webkit-background-size: 16px 11px;
+	background-size: 16px 11px;
+}
+
+.cSCList .li .pic img {
+	width: 100%;
+	height: 100%;
+}
+
+.cSCList .li .txt {
+	float: left;
+	width: 9.32em;
+	overflow: hidden;
+	margin-left: 0.5em;
+}
+
+.cSCList .li .txt h3 {
+	color: #333;
+}
+
+.cSCList .li .txt .d1 {
+	font-size: 0.85em;
+	color: #999;
+}
+
+.cSCList .li .txt .d2 {
+	font-size: 0.85em;
+	color: #999;
+	overflow: hidden;
+}
+
+.cSCList .li .txt .d2 p {
+	overflow: hidden;
+	color: #333;
+}
+
+.cSCList .li .txt .d2 span {
+	float: left;
+	width: 1em;
+	height: 1em;
+	margin: 0.2em 0.5em 0 0;
+	color: transparent;
+	background: url(../img/icon_price.png) no-repeat 0 0;
+}
+
+.cSCList .li .txt .d2 em {
+	color: #ff5534;
+}
+
+.cSCList .li .txt2 {
+	width: 12em;
+}
+
+.cSCList .li .txt .d4,.cSCList .li .txt .d3 {
+	font-size: 0.85em;
+	color: #666;
+}
+
+.cSCList .li .txt .d4 span,.cSCList .li .txt .d3 span {
+	color: #999;
+}
+
+.cSCList .li .txt .d4 em {
+	font-family: 'Microsoft YaHei';
+	font-size: 1.14em;
+	color: #ff5534;
+}
+
+.cSCList .li .btnWrap {
+	position: absolute;
+	top: 0;
+	left: 84px;
+	padding-top: 1em;
+	bottom: 0;
+	text-align: center;
+}
+
+.cSCList .li .btnWrap p {
+	float: left;
+	margin-right: 0.4em;
+}
+
+.cSCList .li .btnWrap span {
+	display: block;
+	color: #999;
+	font-size: 0.71em;
+}
+
+.cSCList .li .btnWrap span[succ] {
+	color: #ff5534;
+}
+
+.cSCList .li .btnWrap1 p {
+	width: 10em;
+	float: none;
+	color: #666;
+}
+
+.cart-deals-list li {
+  display: block;
+  border-bottom: .0625rem #D8D8D8 solid;
+  position: relative;
+  background: #F7F7F7;
+  height: 6.75rem;
+  padding: .6375rem .625rem;
+}
+.cart-deals-list .product-img {
+  display: block;
+  position: absolute;
+  left: .625rem;
+  width: 6rem;
+  height: 6rem;
+}
+.cart-deals-list .product-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.cart-deals-list .cart-info {
+  margin-left: 7.5rem;
+}
+.cart-title {
+  position: relative;
+}
+.cart-deals-list .info-left {
+  width: 100%;
+}
+.fl {
+  float: left;
+}
+.cart-deals-list .main-title {
+  height: 2.5rem;
+  margin-top: .125rem;
+  color: #333;
+  overflow: hidden;
+  font-size: .875rem;
+}
+.cart-deals-list .sub-title {
+  color: #999;
+  height: 1.5625rem;
+  line-height: 1.5625rem;
+  overflow: hidden;
+  margin: .1875rem 0 .125rem;
+}
+.cart-deals-list .sub-title .fr {
+  font-style: normal;
+  color: #F60;
+}
+.price-list {
+  position: absolute;
+  top: .1875rem;
+  right: 0;
+}
+.cart-deals-list .sale-price {
+  font-size: 1rem;
+  color: #5E5E5E;
+}
+.cart-deals-list .cart-market-price {
+  color: #999;
+  /* text-decoration: line-through; */
+  font-size: .875rem;
+  text-align: right;
+}
+.num-count {
+  margin-top: .2875rem;
+  border: .0625rem solid #DAD7D7;
+  -webkit-border-radius: .125rem;
+  border-radius: .125rem;
+}
+.btn-sub {
+  display: inline-block;
+  width: 2.375rem;
+  height: 1.5rem;
+  line-height: 1.25rem;
+  text-align: center;
+  vertical-align: top;
+  background: url(http://a2.jmstatic.com/d943ba4a23e117dd/sub.png) center center no-repeat;
+  background-size: .875rem .875rem;
+}
+.btn-sub-select {
+  background: url(http://a4.jmstatic.com/188153b587aed636/sub_select.png) center center no-repeat;
+  background-size: .875rem .875rem;
+}
+.quantity {
+  width: 2.8125rem;
+  line-height: 1.5rem;
+  border-left: .0625rem solid #DAD7D7;
+  border-right: .0625rem solid #DAD7D7;
+  color: #424242;
+  border-bottom: 0;
+  border-top: 0;
+  text-align: center;
+  font-size: .875rem;
+}
+.btn-add {
+  display: inline-block;
+  width: 2.375rem;
+  height: 1.5rem;
+  line-height: 1.25rem;
+  text-align: center;
+  vertical-align: top;
+  background: url(http://a5.jmstatic.com/75f5296d678d84ec/add.png) center center no-repeat;
+  background-size: .875rem .875rem;
+}
+.btn-add-select {
+  background: url(http://a2.jmstatic.com/fe254be412679c0e/add_select.png) center center no-repeat;
+  background-size: .875rem .875rem;
+}
+.fr {
+  float: right;
+}
+.cart-del {
+  background: url(http://a2.jmstatic.com/101281afd60bdd5e/trash.png) center center no-repeat;
+  background-size: 1.125rem 1.125rem;
+  display: block;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  right: 10px;
+  bottom: 12px;
+}
+
+/**************************************
+订单 list
+**************************************/
+.cOrderList {
+	background-color: #fff;
+}
+
+.cOrderList .li {
+	position: relative;
+	padding: 1em 0.7em 2em;
+	background: url(../img/listBg.jpg) repeat-x bottom;
+}
+
+.cOrderList .li .clGray {
+	color: #7e7e7e;
+}
+
+.cOrderList .li .clRed,.cSearchInfo p .clRed {
+	color: #c21825;
+}
+
+.cOrderList .li .OrderListcirle {
+	position: absolute;
+	right: 2em;
+	top: 0.8em;
+	width: 6em;
+	height: 6em;
+	line-height: 6em;
+	box-shadow: 1px 1px 5px #ccc;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.cOrderList .li .OrderListcirle a {
+	color: #000;
+}
+
+.cOrderList .li .OrderListcirle.noPaied {
+	color: #fff;
+	background-color: #e44945;
+}
+
+.cOrderList .li .OrderListcirle.noPaied a {
+	color: #fff;
+}
+
+.cOrderList .li .deleteList {
+	position: absolute;
+	right: 2.8em;
+	top: 7.5em;
+	height: 1.5em;
+	background-color: #cacaca;
+	color: #fff;
+	box-shadow: 1px 1px 3px #ccc;
+	border-radius: 3px;
+	text-align: center;
+}
+
+.cOrderList .li .deleteList.havePaied {
+	background-color: #65a044;
+	cursor: pointer;
+}
+
+.cOrderList .li .upArr {
+	background: url(../img/arup.jpg) right no-repeat;
+}
+
+.cOrderList .li .downArr {
+	background: url(../img/ardw.jpg) right no-repeat;
+}
+
+.listDetailTable {
+	text-align: center;
+	border-top: 1px solid #a0a0a0;
+	margin: 1em 0;
+}
+
+.listDetailTable tr {
+	border-bottom: 1px solid #a0a0a0;
+}
+
+.listDetailTable td {
+	padding: 0.8em 0.8em;
+	background: url(../img/tableTd.jpg) right center no-repeat;
+}
+
+.listDetailTable tr:first-child td {
+	background: none;
+}
+
+.listDetailTable tr td:last-child {
+	background: none;
+}
+
+.addressTable {
+	text-align: left;
+}
+
+.addressTable td {
+	padding: 10px 0;
+}
+
+.addressTable::after {
+	content: "";
+	width: 1em;
+	height: 1em;
+	background: #649f43;
+	border-radius: 50%;
+	position: absolute;
+	top: 1.2em;
+	left: -1.2em;
+}
+
+.loc-set {
+	border: none;
+	width: 31%;
+	border-bottom: 1px solid #308544;
+	height: 1.71em;
+	line-height: 1.71em;
+	margin-top: 0.7em;
+}
+
+.loc-set:focus {
+	outline: none;
+}
+/*备注*/
+.cRemarkBuy {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: -0.7em;
+	bottom: 0;
+	right: -0.7em;
+	overflow: hidden;
+	padding: 0.5em 9.5em 0.5em 1em;
+	z-index: 100;
+	font-size: 1em;
+	background-color: #fff;
+}
+
+.cRemarkBuy textarea {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #e1e1e1;
+	resize: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.cRemarkBuy .btnSel {
+	float: right;
+	margin-right: -10em;
+	width: 10em;
+	font-size: 0.85em;
+	height: 100%;
+	border: none;
+	outline: none;
+}
+
+.cRemarkBuy input[type="button"] {
+	float: left;
+	width: 5em;
+	height: 100%;
+	border: none;
+	outline: none;
+}
+
+.cRemarkBuy input.confim {
+	background: #fdd54e;
+	color: #fff;
+}
+
+.cRemarkBuy input.cancel {
+	color: #666;
+	background: #dddddd;
+}
+
+.cDel1,.cDel {
+	position: absolute;
+	left: 0;
+	z-index: 10;
+	margin-left: -0.5em;
+	top: 0.5em;
+	width: 1.14em;
+	height: 1.14em;
+	background-color: #f34946;
+}
+
+.cDel1::after,.cDel1::before,.cDel::after,.cDel::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	height: 0;
+	border: 1px solid #fff;
+	margin-top: -1px;
+	left: 0.2em;
+	right: 0.2em;
+	background-color: #fff;
+}
+
+.cBtnRemark,.cBtnNum,.cBtnBuy {
+	width: 2.23em;
+	height: 1.91em;
+	padding: 0;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 1.28em;
+	font-family: 'Microsoft YaHei';
+}
+
+.cBtnBuy2 {
+	width: 2.23em;
+	height: 1.91em;
+	padding: 0;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 1.28em;
+	font-family: 'Microsoft YaHei';
+}
+
+.cBtnNum {
+	border: 1px solid #dedede;
+}
+
+.cBtnBuyCart {
+	border: 1px solid #71a14b;
+	background: url(../img/icon_car.png) no-repeat 0 0;
+	color: transparent;
+}
+
+.cBtnRemark,.cBtnCancel {
+	width: 2.86em;
+	height: 2.43em;
+	border: 1px solid #e44442;
+	font-size: 1em;
+	background: #f34946;
+	color: #fff;
+}
+
+.cBtnRemark {
+	border: 1px solid #dedede;
+	color: #333;
+	background: #fff;
+}
+
+.cBtnNum {
+	background: rgb(255, 255, 255); /* Old browsers */
+	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%,
+		rgba(229, 229, 229, 1) 100% ); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,
+		255, 255, 1) ), color-stop(100%, rgba(229, 229, 229, 1) ) );
+	/* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%,
+		rgba(229, 229, 229, 1) 100% ); /* Chrome10+,Safari5.1+ */
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%,
+		rgba(229, 229, 229, 1) 100% ); /* W3C */
+}
+
+.cScroller {
+	position: absolute;
+	right: -100em;
+	top: -100em;
+	height: 4.55em;
+	z-index: 100;
+	background-color: #fff;
+	width: 8em;
+	border: 1px solid #dedede;
+	overflow: hidden;
+	-webkit-user-select: none;
+}
+
+.cScroller ul {
+	padding: 0;
+	text-align: center;
+	overflow: hidden;
+}
+
+.cScroller li {
+	height: 1.25em;
+	font-size: 1.25em;
+	line-height: 1.25em;
+	font-family: 'Microsoft YaHei';
+	overflow: hidden;
+	float: left;
+	width: 100%;
+}
+
+.cScroller::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: rgb(231, 231, 231, 0.4); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(231, 231, 231, 0.6) 0%,
+		rgba(255, 255, 255, 0) 51%, rgba(231, 231, 231, 0.6) 100% );
+	/* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(231,
+		231, 231, 0.6) ), color-stop(51%, rgba(255, 255, 255, 0) ),
+		color-stop(100%, rgba(231, 231, 231, 0.6) ) ); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(231, 231, 231, 0.6) 0%,
+		rgba(255, 255, 255, 0) 51%, rgba(231, 231, 231, 0.6) 100% );
+	/* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom, rgba(231, 231, 231, 0.6) 0%,
+		rgba(255, 255, 255, 0) 51%, rgba(231, 231, 231, 0.6) 100% ); /* W3C */
+}
+
+.cScroller li.end {
+	text-indent: -9999px;
+	overflow: hidden;
+}
+
+.cScroller li.cur {
+	color: #f34946;
+}
+
+.cAddType {
+	position: fixed;
+	right: 0.7em;
+	color: #fff;
+	bottom: 4em;
+	width: 2.85em;
+	height: 2.85em;
+	text-align: center;
+	z-index: 999;
+	border: 1px solid #e1b122;
+	background-color: rgba(250, 191, 11, 0.9);
+}
+
+.cAddType span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 1em;
+	width: 2em;
+	height: 3em;
+	white-space: nowrap;
+}
+
+/**/
+.cBuyConf {
+	
+}
+
+.cBuyConf ul {
+	margin-bottom: 0.5em;
+	border-bottom: 1px solid #f0f0f0;
+	padding-bottom: 0.5em;
+}
+
+.cBuyConf li {
+	padding: 0.2em 0;
+	font-size: 1.14em;
+	color: #333;
+}
+
+.cBuyConf li .tit {
+	color: #999;
+	float: left;
+}
+
+.cBuyConf li div {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #d2d2d2;
+}
+
+.cBuyConf li div::after {
+	content: "";
+	position: absolute;
+	right: 0.5em;
+	top: 50%;
+	margin-top: -0.5em;
+	width: 0.5em;
+	height: 0.5em;
+	border-left: 1px solid #f60;
+	border-bottom: 1px solid #f60;
+}
+
+.cBuyConf li div select {
+	margin: 0;
+	border: none;
+	width: 100%;
+	outline: none;
+	vertical-align: middle;
+}
+
+.cBuyConf p {
+	text-align: center;
+	font-size: 1.71em;
+	color: #999;
+}
+
+.cBuyConf p em {
+	color: #f34946;
+}
+
+.cBuyConf input[type="button"] {
+	margin: 10px 0 0 0;
+}
+
+/**************************************
+index loginr
+font-size: 16 1.14;
+**************************************/
+.cLoginBg {
+	background: #fff;
+}
+
+.cIndexLogo {
+	width: 15em;
+	height: 4.43em;
+	margin: 23% auto 1em;
+	background: url(../img/logo1.png) no-repeat 0 0;
+}
+
+.cIndexLogin {
+	max-width: 640px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.cUlLogin {
+	margin: 0 5% 0;
+	overflow: hidden;
+	font-size: 1.14em;
+}
+
+.cUlLogin li {
+	position: relative;
+	padding: 10px 0 10px 2em;
+	border-top: 1px solid #65a044;
+	margin-top: -1px;
+}
+
+.cUlLogin li input {
+	display: block;
+	width: 100%;
+	height: 1.71em;
+	line-height: 1.71em;
+	border: 0 none;
+}
+
+.cUlLogin li::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 1.42em;
+	width: 1.42em;
+	margin: -0.71em 0 0;
+}
+
+.cUlLogin .user::after {
+	background: url(../img/user.png) no-repeat 0 0;
+}
+
+.cUlLogin .pass::after {
+	background: url(../img/pass.png) no-repeat 0 0;
+}
+
+.cUlLogin .remb {
+	color: #666;
+	overflow: hidden;
+}
+
+.cUlLogin .remb label {
+	float: right;
+}
+
+.cUlLogin .remb input {
+	float: left;
+	margin: 0.3em;
+	padding: 0;
+	width: 1em;
+	height: 1em;
+	background: url(../img/icon_remb.png) repeat top left;
+}
+
+.cUlLogin .remb input:checked {
+	background-position: left bottom;
+}
+
+.cUlLogin .remb input,.cUlLogin .remb input:checked {
+	-webkit-background-size: 100% 200%;
+	background-size: 100% 200%;
+}
+
+.cIndexLogin .btnWap {
+	margin: 0 5%;
+	padding-bottom: 0.5em;
+}
+
+.cIndexLogin .btnWap .cBtnReg {
+	margin-bottom: 0.8em;
+}
+
+.cNextStep,.cRegConif,.cAddTypeLink,.cBtnRedMod,.cBtnGrayMod,.cBtnReg1,.cBtnLog,.cBtnReg
+	{
+	display: block;
+	width: 100%;
+	padding: 0.6em 0;
+	font-size: 1.14em;
+	text-align: center;
+}
+
+.cNextStep,.cCheckMore,.cRegConif,.cBtnGrayMod,.cBtnRedMod,.cAddTypeLink,.cBtnReg1,.cBtnLog
+	{
+	color: #318341;
+	background-color: #fff;
+	border: 1px solid #65a044;
+	margin-bottom: 0.6em;
+}
+
+.cNextStep,.cCheckMore,.cRegConif,.cBtnGrayMod,.cBtnRedMod,.cAddTypeLink
+	{
+	color: #fff;
+	background-color: #f34946;
+	border: 1px solid #d8413e;
+	margin-bottom: 0.6em;
+}
+
+.cBtnReg {
+	font-size: 1em;
+	color: #318341;
+	background-color: #fff;
+	border: 1px solid #65a044;
+}
+
+.cAddTypeLink {
+	margin: 1em 0.7em;
+	display: block;
+	width: auto;
+	overflow: hidden;
+}
+
+.cBtnRedMod:active {
+	background-color: red;
+}
+
+.cBtnGrayMod {
+	border-color: #e1e1e1;
+	background-color: #e1e1e1;
+	color: #f34946;
+}
+
+/*cQuickGuid*/
+.cQuickGuid {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 9999;
+}
+
+.cQuickGuid .cBtnRedMod {
+	position: absolute;
+	width: 4.07em;
+	height: 1.96em;
+	left: 50%;
+	margin: 0 0 0 -2.03em;
+	border: none;
+	padding: 0;
+	top: 52%;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(../img/guide_4.png) no-repeat 0 0;
+}
+
+.cQuickGuid .guide {
+	position: absolute;
+	text-indent: -9999px;
+	overflow: hidden;
+	color: transparent;
+}
+
+.cQuickGuid .guide1 {
+	left: 13%;
+	top: 7em;
+	width: 12em;
+	height: 8.57em;
+	background: url(../img/guide_1.png) no-repeat 0 0;
+}
+
+.cQuickGuid .guide2 {
+	width: 12em;
+	height: 8.57em;
+	right: 3em;
+	top: 7em;
+	background: url(../img/guide_2.png) no-repeat 0 0;
+}
+
+.cQuickGuid .guide3 {
+	width: 8.64em;
+	height: 6.43em;
+	right: 2em;
+	bottom: 2em;
+	background: url(../img/guide_3.png) no-repeat 0 0;
+}
+
+/**************************************
+register
+**************************************/
+.cUlTel {
+	margin: 2% 11% 2%;
+}
+
+.cUlTel .checkCode {
+	position: absolute;
+	top: 0;
+	right: -100%;
+	padding: 0.5em;
+	width: 70%;
+	height: 68%;
+	background-color: #308544;
+	color: #fff;
+	border-radius: 5px;
+	line-height: 180%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.cUlTel li {
+	position: relative;
+	border: 1px solid #616161;
+	border-radius: 5px;
+	padding: 0.5em;
+	margin-top: 1em;
+}
+
+.cUlTel li input {
+	display: block;
+	width: 100%;
+	height: 1.71em;
+	line-height: 1.71em;
+	border: 0 none;
+}
+
+.cUlTel li textarea {
+	width: 100%;
+	height: 5em;
+	padding: 0;
+	border: none;
+	vertical-align: top;
+	outline: none;
+}
+
+.cUlTel .short img {
+	position: absolute;
+	right: 1em;
+	top: 50%;
+}
+
+.cRegFixedPop h2 {
+	font-size: 1.35em;
+	color: #333;
+	text-align: center;
+	padding: 0.5em;
+	margin-bottom: 1em;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.cRegister .tips {
+	position: relative;
+	padding-left: 1em;
+	margin: 0 11% 10%;
+	font-size: 0.85em;
+	color: #999;
+}
+
+.cRegister .tips::before {
+	content: "";
+	width: 0.85em;
+	height: 0.85em;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	background: url(../img/tips_icon.png) no-repeat 0 0;
+}
+
+.cRegister .btnWap {
+	margin: 11% 11%;
+}
+
+.cRegFixedPop ul {
+	color: #999;
+	margin-bottom: 1em;
+}
+
+.cRegFixedPop ul li {
+	margin-bottom: 1.5em;
+}
+
+.cRegFixedPop ul li p {
+	text-align: center;
+	font-size: 1.28em;
+}
+
+.cRegFixedPop ul li p a {
+	color: #f34946;
+	font-weight: bold;
+}
+
+.cBtnReg1 {
+	background-color: #308544;
+	color: #fff;
+}
+
+.cUlRePass li {
+	border: none;
+	border-bottom: 1px solid #308544;
+	border-radius: 0;
+}
+
+.cUlRePass .checkCode {
+	right: 0;
+	padding: 0.5em;
+	width: 30%;
+	height: 50%;
+	background-color: #308544;
+	color: #fff;
+	border-radius: 5px;
+	line-height: 150%;
+	text-align: center;
+	cursor: pointer;
+}
+
+/**************************************
+find password
+**************************************/
+.cUlPass {
+	margin: 8% 11%;
+}
+
+.cUlPass li {
+	position: relative;
+	padding: 0.8em 0;
+	border-bottom: 1px solid #e3e3e3;
+	overflow: hidden;
+}
+
+.cUlPass li:nth-child(1) {
+	padding-left: 6em;
+}
+
+.cUlPass .lab {
+	float: left;
+	margin-left: -5.3em;
+	font-size: 1.14em;
+	color: #333;
+}
+
+.cUlPass .selectBox {
+	position: relative;
+	min-height: 1.64em;
+	color: #333;
+	border: 1px solid #d2d2d2;
+}
+
+.cUlPass .selectBox::after {
+	content: "";
+	position: absolute;
+	right: 0.8em;
+	top: 50%;
+	width: 0.5em;
+	height: 0.5em;
+	border-left: 0.15em solid #f34b48;
+	border-bottom: 0.15em solid #f34b48;
+	margin-top: -0.4em;
+	background-color: #fff;
+}
+
+.cUlPass .selectBox select {
+	width: 100%;
+	border: none;
+	outline: none;
+	height: 100%;
+}
+
+.cUlPass .cParent::before {
+	content: "";
+	width: 1em;
+	height: 1em;
+	position: absolute;
+	left: 0.25em;
+	top: 50%;
+	background: url(../img/parent.png) no-repeat 0 0;
+}
+
+.cUlPass .cParent select {
+	padding-left: 1.5em;
+}
+
+.cUlPass li input[type="text"],.cUlPass li input[type="password"] {
+	display: block;
+	width: 100%;
+	height: 1.71em;
+	line-height: 1.71em;
+	border: 0 none;
+}
+
+.cUlPass li input[type="button"] {
+	position: absolute;
+	right: 0;
+	top: 50%;
+	padding: 10px;
+	border: 0 none;
+	background-color: #fff;
+	color: #ff5534;
+	border-left: 1px solid #e3e3e3;
+	z-index: 10;
+}
+
+.cUlPass li input[type="button"]:disabled {
+	color: #d7d7d7;
+}
+
+.cFindPass .btnWap {
+	margin: 0 11%;
+}
+
+.cLine {
+	height: 1em;
+	background-color: #f0f0f0;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.pro-list {
+  font-size: 12px;
+  padding: 5px;
+  list-style: none;
+  margin: 0;
+}
+.pro-list .card {
+  position: relative;
+  max-height: 230px;
+  margin: 4px 0;
+}
+.pro-list .small-pic {
+  width: 50%;
+  float: left;
+}
+.pro-list .link {
+  display: block;
+  background: #fff;
+  min-height: 100px;
+}
+.pro-list .small-pic.card .link {
+  border-top: 2px solid #e5e5e5;
+  border-right: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  border-left: 2px solid #e5e5e5;
+  margin: 0 4px;
+}
+.pro-list .photo-block {
+  height: 126px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  background-color: #f8f8f8;
+  background-size: 6px 6px;
+}
+.pro-list .photo-block img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  vertical-align: bottom;
+  max-width: 100%;
+    height: 100%;
+}
+.pro-list .info {
+  position: relative;
+    min-height: 25px;
+}
+.pro-list .card .info {
+  padding-left: 4px;
+  margin-top: 10px;
+}
+.pro-list .card .info .pro-title {
+  height: 32px;
+  overflow: hidden;
+  margin-bottom: 5px;
+    line-height: 1.3;
+  overflow: hidden;
+  color: #333;
+}
+.pro-list .card .info .pro-price {
+  float: left;
+  margin: 0 10px 10px 0;
+    margin-top: 5px;
+      font-weight: bold;
+  padding: 0px;
+}
+.pro-list .card .info p.pro-price > em {
+  font-style: normal;
+  color: #ff6600;
+}
+.pro-list .card .buy-btn {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  height: 25px;
+  width: 30px;
+  background-position: 0 0;
+  background-image: url("../img/showcase2x-1416814739063.png");
+  background-repeat: no-repeat;
+  background-size: 40px auto;
+}
+
+
+
+
+
+
+
+
+
+
+/**************************************
+ding dan
+**************************************/
+.cTabDd {
+	position: relative;
+	z-index: 20;
+	overflow: hidden;
+	text-align: center;
+	border-bottom: 1px solid #eaeaea;
+	background-color: #fff;
+}
+
+.cTabDd li {
+	display: inline-block;
+	width: 40%;
+	margin: 0 4%;
+	margin-bottom: -1px;
+}
+
+.cTabDd li a {
+	display: block;
+	width: 100%;
+	padding: 1em 0;
+	color: #888888;
+}
+
+.cTabDd li.cur {
+	border-bottom: 2px solid #ffbc07;
+}
+
+.cTabDd li.cur a {
+	color: #ffbc07;
+}
+
+.cTabDdCon {
+	overflow: hidden;
+}
+
+.cTabDdCon .cDdList {
+	padding-top: 3.64em;
+	margin-top: -3.64em;
+}
+
+.cDdList {
+	background-color: #f0f0f0;
+}
+
+.cDdList li {
+	position: relative;
+	padding: 1em;
+	background-color: #fff;
+	border-top: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+	margin-bottom: 1em;
+}
+
+.cDdList li:nth-child(1) {
+	border-top: 0 none;
+}
+
+.cDdList li:nth-child(1) dt {
+	border-left: 0.5em solid #f34946;
+	padding-left: 0.5em;
+	margin-left: -1em;
+}
+
+.cDdList li .detail {
+	position: absolute;
+	right: 1em;
+	top: 2.5em;
+	text-align: center;
+	height: 5.2em;
+	width: 5.2em;
+	line-height: 5.2em; /*border: 1px solid #e4e4e4;*/
+	color: #999;
+	background: url(../img/detail_bg.png) no-repeat 0 0;
+}
+
+.cDdList dl {
+	color: #333333;
+}
+
+.cDdList dl span {
+	color: #999;
+}
+
+.cDdList dl dt {
+	font-size: 1.14em;
+	margin-bottom: 0.8em;
+}
+
+.cProgress {
+	padding-top: 1em;
+}
+
+.cProgress h2 {
+	position: relative;
+	z-index: 1;
+}
+
+.cProgress h2 span {
+	background-color: #fff;
+}
+
+.cProgress h2::before {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	border-top: 1px solid #e6e6e6;
+}
+
+.cProgress .pro {
+	margin: 0 2em;
+	padding: 1em 0 3.5em 0;
+	height: 0.5em;
+	position: relative;
+}
+
+.cProgress .pro .step {
+	z-index: 10;
+	position: relative;
+	float: left;
+	width: 33.3%;
+	height: 0.5em;
+	background-color: #f0f0f0;
+	border-top: 1px solid #d8d8d8;
+}
+
+.cProgress .pro .step3::after,.cProgress .pro .step::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -0.6em;
+	width: 1.2em;
+	height: 1.2em;
+	background-color: #f0f0f0;
+	border: 1px solid #d8d8d8;
+}
+
+.cProgress .pro .step3::after {
+	left: auto;
+	right: -0.6em;
+}
+/*.cProgress .allstep1 .step1,*/
+.cProgress .allstep2 .step1,.cProgress .allstep3 .step1,.cProgress .allstep3 .step2,.cProgress .allstep4 .step1,.cProgress .allstep4 .step1,.cProgress .allstep4 .step1,.cProgress .allstep4 .step2,.cProgress .allstep4 .step3,.cProgress .allstep5 .step
+	{
+	background-color: #f34946;
+	border-top-color: #c12a43;
+}
+
+.cProgress .allstep2 .step1::before,.cProgress .allstep2 .step2::before,.cProgress .allstep3 .step1::before,.cProgress .allstep3 .step2::before,.cProgress .allstep3 .step3::before,.cProgress .allstep4 .step1::before,.cProgress .allstep4 .step2::before,.cProgress .allstep4 .step3::before,.cProgress .allstep4 .step4::before
+	{
+	background-color: #f34946;
+	border-color: #f34946;
+}
+
+.cProgress .allstep1 .step1::before,.cProgress .allstep2 .step2::before,.cProgress .allstep3 .step3::before,.cProgress .allstep4 .step3::after
+	{
+	width: 2em;
+	height: 2em;
+	left: -1em;
+	background: url(../img/curStep.png) no-repeat center center;
+	border: none;
+}
+
+.cProgress .allstep4 .step3::after {
+	left: auto;
+	right: -1em;
+}
+
+.cProgress .pro .text {
+	position: absolute;
+	top: 3em;
+	width: 25%;
+	text-align: center;
+}
+
+.cProgress .pro .text1 {
+	left: 0;
+}
+
+.cProgress .pro .text2 {
+	left: 33.3%;
+}
+
+.cProgress .pro .text3 {
+	left: 66.6%;
+}
+
+.cProgress .pro .text4 {
+	left: 100%;
+}
+
+.cProgress .pro .text::before {
+	content: "";
+	border: 1px solid #ccc;
+	width: 0;
+	height: 1em;
+	position: absolute;
+	left: 50%;
+	top: -1.5em;
+}
+
+.cProgress .pro .text4::before {
+	margin-left: -0.2em;
+}
+
+.cProgress .allstep2 .text1,.cProgress .allstep3 .text1,.cProgress .allstep3 .text2,.cProgress .allstep4 .text1,.cProgress .allstep4 .text1,.cProgress .allstep4 .text1,.cProgress .allstep4 .text2,.cProgress .allstep4 .text3
+	{
+	color: #f34946;
+}
+
+.cProgress .jd {
+	color: #f34946;
+}
+
+.cProgress .jd span {
+	color: #333;
+}
+
+/**************************************
+cDDDetail
+**************************************/
+.cDDDetail {
+	background-color: #f0f0f0;
+	overflow: hidden;
+}
+
+.cDDDetail .cDdList {
+	font-size: 1.14em;
+	overflow: hidden;
+}
+
+.cDDDetail .cDdList dt {
+	margin-bottom: 0;
+	padding: 0.3em 0;
+}
+
+.cDDDetail .cDdList dd {
+	padding: 0.3em 0;
+}
+
+.cDDDetail .cDdList dd strong {
+	color: #f34946;
+}
+
+.cDDDetail .cDdList dd strong em {
+	font-size: 0.8em;
+}
+
+/**************************************
+cBuyType
+**************************************/
+.cBuyType {
+	margin-bottom: 5em;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+.cBuyType .tit {
+	position: relative;
+	border-top: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
+	background-color: #fff;
+	font-size: 1.14em;
+	padding: 0.5em 1em;
+}
+
+.cBuyType .tit span {
+	color: #999;
+}
+
+.cBuyType .tit::after {
+	content: "";
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	width: 0.5em;
+	height: 0.5em;
+	border-left: 0.15em solid #ffbd0a;
+	border-bottom: 0.15em solid #ffbd0a;
+	margin-top: -0.4em;
+	background-color: #fff;
+}
+
+.cBuyType .titShow::after {
+	margin-top: -0.15em;
+}
+
+.cBuyType .typeList {
+	overflow: hidden;
+	padding: 0 1em;
+	background-color: #fff;
+}
+
+.cBuyType .typeList table {
+	width: 100%;
+}
+
+.cBuyType .typeList td,.cBuyType .typeList th {
+	padding: 0.5em 0;
+	color: #999;
+	text-align: center;
+	border-bottom: 1px solid #e8e8e8;
+}
+
+.cBuyType .typeList td {
+	color: #666;
+}
+
+.cBuyType .typeList tr td:nth-child(1) {
+	text-align: left;
+	font-size: 0.85em;
+}
+
+.cBuyType .typeList tr td:nth-child(2) {
+	padding: 0.5em 0;
+	text-align: center;
+	width: 26%;
+	font-size: 0.71em;
+}
+
+.cBuyType .typeList tr td:nth-child(3) {
+	text-align: right;
+	width: 20%;
+	font-size: 0.85em;
+}
+
+.cBuyType .typeList tr td:nth-child(4) {
+	text-align: right;
+	width: 22%;
+	font-size: 0.71em;
+}
+
+.cBuyType .typeList tr td:nth-child(4) em {
+	font-size: 1.14em;
+	color: #ff5534;
+	font-family: 'Microsoft YaHei';
+}
+
+.cBuyType .typeList tr:last-child td {
+	border: none;
+}
+
+.cBuyType .typeList td div {
+	position: relative;
+	padding: 0 0.2em;
+}
+
+.cBuyType .typeList tr td:nth-child(2) div::before,.cBuyType .typeList tr td:nth-child(3) div::before,.cBuyType .typeList tr td:nth-child(4) div::before
+	{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	height: 2.57em;
+	padding: 0 0.2em;
+	border-left: 1px dashed #e5e5e5;
+}
+
+/**************************************
+cJieSuan
+**************************************/
+.cJieSuan {
+	
+}
+
+.cJsList {
+	padding: 1em;
+}
+
+.cJsList li {
+	position: relative;
+	margin-bottom: 1em;
+	padding: 1em;
+}
+
+.cJsList .yellow {
+	background-color: #ffbc07;
+}
+
+.cJsList .green {
+	background-color: #32d082;
+}
+
+.cJsList .blue {
+	background-color: #6a71e5;
+}
+
+.cJsList li .m {
+	position: relative;
+	width: 60%;
+	padding-right: 5%;
+	font-size: 1.28em;
+}
+
+.cJsList li .m::before {
+	content: "￥";
+	position: absolute;
+	right: 0.1em;
+	top: 50%;
+	font-size: 4em;
+	color: rgba(255, 255, 255, 0.15);
+	font-family: "黑体";
+}
+
+.cJsList li .m span {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.cJsList li .m p {
+	text-align: right;
+	color: #fff;
+}
+
+.cJsList li .m em {
+	font-size: 1.5em;
+}
+
+.cJsList li .detail {
+	position: absolute;
+	left: 70%;
+	top: 0;
+	right: 2%;
+	bottom: 0;
+	background-color: #fff;
+	font-size: 1.28em;
+}
+
+.cJsList .yellow .detail {
+	color: #ffbc07;
+}
+
+.cJsList .green .detail {
+	color: #32d082;
+}
+
+.cJsList .blue .detail {
+	color: #6a71e5;
+}
+
+.cJsList li .detail::before {
+	content: "";
+	position: absolute;
+	left: -3px;
+	top: 0;
+	bottom: 0;
+	width: 10px;
+	background: url(../img/icon_jc_v.png) repeat-y 0 0;
+	-webkit-background-size: 10px 27px;
+	background-size: 10px 27px;
+}
+
+.cJsList li .detail span {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+/**************************************
+cMyMenu
+<div class="cProgress">
+	<h2><span>进度：</span></h2>
+	<!-- allstep1, allstep2, allstep3, allstep4 -->
+	<div class="pro {{if $status==1}} allstep2 {{/if}} {{if $status!=1}} allstep4 {{/if}}">
+		<span class="step step1"></span>
+		<span class="step step2"></span>
+		<span class="step step3"></span>
+		<p class="text text1">采购中</p>
+		<p class="text text2">分接中</p>
+		<p class="text text3">派送中</p>
+		<p class="text text4">完成</p>
+	</div>					
+</div>
+**************************************/
+.cMyMenuList {
+	box-sizing: initial !important;
+	font-weight: 100 !important;
+}
+
+.cMyMenuList * {
+	font-size: 13px !important;
+	font-weight: 100 !important;
+	box-sizing: initial !important;
+}
+
+.cMyMenuList dd a::before {
+	content: "";
+	position: absolute;
+	top: 0.5em;
+	left: -4.3em;
+	width: 2.85em;
+	height: 2.85em;
+}
+
+.cMyMenuList .ddList1 a {
+	height: 2.2em;
+}
+
+.cMyMenuList dd a {
+	height: 3em;
+	padding: 0.2em;
+}
+
+.cMyMenuList .ddList1 a::before {
+	background: url(../img/listPic1.jpg) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	top: -2px;
+}
+
+.cMyMenuList .ddList2 a::before {
+	background: url(../img/listPic2.jpg) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.cMyMenuList .ddList3 a::before {
+	background: url(../img/listPic3.jpg) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.cMyMenuList .ddList4 a::before {
+	background: url(../img/listPic4.jpg) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.cMyMenuList .ddList5 a::before {
+	background: url(../img/listPic5.jpg) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.cMyMenuList .ddList6 a::before {
+	background: url(../img/listPic6.jpg) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.cMyMenuList .ddList7 a::before {
+	background: url(../img/listPic7.jpg) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.cMyMenuList .ddList8 a::before {
+	background: url(../img/listPic8.jpg) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.cMyMenuList .ddList9 a::before {
+	background: url(../img/listPic9.png) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.cMyMenuList .ddList10 a::before {
+	background: url(../img/listPic10.png) no-repeat 0 0;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.cMyMenu {
+	padding: 2.5em 1em;
+}
+
+.cMyMenu dt {
+	overflow: hidden;
+	padding: 0.5em 0;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.cMyMenu dt .pic {
+	float: left;
+	width: 3.93em;
+	height: 3.93em;
+	margin-right: 1em;
+	overflow: hidden;
+}
+
+.cMyMenu dt .pic img {
+	width: 100%;
+}
+
+.cMyMenu dd strong,.cMyMenu dt strong {
+	display: block;
+	font-size: 1.14em;
+	color: #333;
+}
+
+.cMyMenu dd span,.cMyMenu dt span {
+	color: #999;
+	line-height: 2;
+}
+
+.cMyMenu dd span {
+	font-size: 0.85em;
+}
+
+.cMyMenu dd {
+	margin-left: 4.93em;
+	border-bottom: 1px solid #a6a6a6;
+}
+
+.cMyMenu dd a {
+	position: relative;
+	display: block;
+	padding: 0.3em 0;
+}
+
+.cMyMenu dd a::before {
+	content: "";
+	position: absolute;
+	top: 0.5em;
+	left: -4.3em;
+	width: 2.85em;
+	height: 2.85em;
+}
+
+.cMyMenu .dd1 a::before {
+	background: url(../img/icon_dd.png) no-repeat 0 0;
+}
+
+.cMyMenu .dd2 a::before {
+	background: url(../img/icon_js.png) no-repeat 0 0;
+}
+
+.cMyMenu .dd3 a::before {
+	background: url(../img/icon_mm.png) no-repeat 0 0;
+}
+
+.cMyMenu .dd4 a::before {
+	background: url(../img/icon_tc.png) no-repeat 0 0;
+}
+
+.cMyMenu .dd5 a::before {
+	background: url(../img/icon_dg.png) no-repeat 0 0;
+}
+
+.cMyMenu .dd6 a::before {
+	background: url(../img/icon_gwc.png) no-repeat 0 0;
+}
+
+.cMyMenu .dd_ye a::before {
+	background: url(../img/icon_ye.png) no-repeat 0 0;
+}
+/*.cMyMenu .dd_geo a::before{ background: url(../img/icon_dw.png) no-repeat 0 0;}*/
+.cMyMenu .dd_quickbuy a::before {
+	background: url(../img/icon_quickbuy.png) no-repeat 0 0;
+}
+
+.cMyMenu .dd_tel a::before {
+	background: url(../img/icon_tel.png) no-repeat 0 0;
+}
+
+.cMyMenu .dd1.cur a strong {
+	color: #1f8bbd;
+}
+
+.cMyMenu .dd1.cur a span {
+	color: #73caf3;
+}
+
+.cMyMenu .dd2.cur a strong {
+	color: #;
+}
+
+.cMyMenu .dd2.cur a span {
+	color: #;
+}
+
+.cMyMenu .dd3.cur a strong {
+	color: #a7bd40;
+}
+
+.cMyMenu .dd3.cur a span {
+	color: #daec84;
+}
+
+.cMyMenu .dd4.cur a strong {
+	color: #e44442;
+}
+
+.cMyMenu .dd4.cur a span {
+	color: #e44442;
+}
+
+.cMyMenu .dd5.cur a strong {
+	color: #fc5720;
+}
+
+.cMyMenu .dd5.cur a span {
+	color: #ffb599;
+}
+
+.cMyMenu .dd6.cur a strong {
+	color: #f7c93f;
+}
+
+.cMyMenu .dd6.cur a span {
+	color: #ffdf73;
+}
+
+.cMyMenu .dd_quickbuy.cur a strong {
+	color: #f34946;
+}
+
+.cMyMenu .dd_quickbuy.cur a span {
+	color: #a0a0a0;
+}
+
+.cMyMenu .dd1.cur a::before {
+	background-image: url(../img/icon_dd_active.png);
+}
+
+.cMyMenu .dd2.cur a::before {
+	background-image: url(../img/icon_js_active.png);
+}
+
+.cMyMenu .dd3.cur a::before {
+	background-image: url(../img/icon_mm_active.png);
+}
+
+.cMyMenu .dd4.cur a::before {
+	background-image: url(../img/icon_tc_active.png);
+}
+
+.cMyMenu .dd5.cur a::before {
+	background-image: url(../img/icon_dg_active.png);
+}
+
+.cMyMenu .dd6.cur a::before {
+	background-image: url(../img/icon_gwc_active.png);
+}
+
+.cMyMenu .dd_ye.cur a::before {
+	background-image: url(../img/icon_ye_active.png);
+}
+
+.cMyMenu .dd_quickbuy.cur a::before {
+	background-image: url(../img/icon_quickbuy_active.png);
+}
+
+.cMyMenu .new {
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	padding: 0 1em;
+	background-color: #f34946;
+	color: #fff;
+}
+
+/**************************************
+addSCType
+**************************************/
+.cAddSCType {
+	padding: 2.5em 1em;
+	margin-bottom: 4em;
+}
+
+.cAddSCType h2 {
+	color: #666;
+	padding-left: 1em;
+	margin: 0 0 1em -1em;
+}
+
+.cAddSCType .scList {
+	margin-bottom: 2em;
+}
+
+.cAddSCType .scList dt,.cAddSCType .scList dd {
+	position: relative;
+	border-bottom: 1px solid #e3e3e3;
+}
+
+.cAddSCType .scList dd:last-child {
+	border-bottom: none;
+}
+
+.cAddSCType .scList input[type="tel"],.cAddSCType .scList input[type="text"]
+	{
+	vertical-align: middle;
+	border: none;
+	width: 100%;
+	padding: 0.5em 0;
+}
+
+.cAddSCType .scList textarea {
+	border: none;
+	width: 100%;
+	min-height: 5em;
+	outline: none;
+	padding: 0.5em 0;
+}
+
+.cAddSCType .scList .tips {
+	color: #65a044;
+	padding-top: 0.5em;
+	font-size: 0.8em;
+}
+
+.cRegConif {
+	color: #fff;
+	background-color: #e44945;
+	border: none;
+}
+
+/**************************************
+cAddTypePage
+**************************************/
+.cAddTypePage .cFixedMenuBox {
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+
+.cAddTypePage .cFixedMenuBox .cFixedMenu {
+	width: 100%;
+	-webkit-transform: translate(0);
+	-ms-transform: translate(0);
+	transform: translate(0);
+}
+
+.cAddTypePage .cFixedMenuBox .cFixedClosed {
+	display: none;
+}
+
+.cAddTypePage .cFixedMenuBox .cAddSCType {
+	padding-top: 1em;
+}
+
+.cAddTypePage .cFixedMenuBox .cAddSCType h2 {
+	border-left: 0;
+}
+
+.cAddTypePage .cFixedMenuBox .cAddSCType textarea {
+	min-height: 3em;
+}
+
+.cAddTypePage .cFixedMenuBox .cAddSCType dl {
+	margin-bottom: 1em;
+}
+
+.cIndexDataloading {
+	height: 40px;
+	background: url(../img/loading.gif) no-repeat center center;
+}
+
+.cFixedLoading {
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: url(../img/loading.gif) no-repeat center center;
+}
+
+.cIndexDataloading,.cFixedLoading {
+	-webkit-background-size: 16px 16px;
+	background-size: 16px 16px;
+}
+
+.cNoLoginTip {
+	display: none;
+	position: absolute;
+	z-index: 20;
+	overflow: hidden;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: rgba(0, 0, 0, 0.8);
+	white-space: nowrap;
+}
+
+.cNoLoginTip span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #ffe99c;
+}
+
+/*试一试*/
+.cFixedPopTry .cBuyConf {
+	padding-top: 1em;
+}
+
+.cFixedPopTry .cBuyConf p {
+	font-size: 1em;
+}
+
+.cFixedPopTry .cBuyConf p a {
+	display: block;
+	font-size: 2em;
+	text-align: center;
+	color: red;
+}
+
+.cFixedPopTry .cBuyConf .btnWrap {
+	position: relative;
+	padding-top: 1em;
+	overflow: hidden;
+}
+
+.cFixedPopTry .cBuyConf .cRegConif {
+	float: left;
+	width: 47%;
+}
+
+.cFixedPopTry .cBuyConf .cBtnReg {
+	float: right;
+	width: 47%;
+	font-size: 1.14em;
+}
+
+.cBalance {
+	position: fixed;
+	top: 46%;
+	left: 2em;
+	right: 2em;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	padding: 1em;
+	z-index: 9999999;
+}
+/*余额明细表格*/
+.table_blance {
+	width: 100%;
+	table-layout: fixed;
+	background-color: #fcffd7;
+	text-align: center;
+}
+
+.table_blance th,.table_blance td {
+	padding: 0.5em 1em;
+}
+
+.table_blance th {
+	background-color: #e0e55b;
+}
+
+.table_blance tr td:last-child {
+	text-align: right;
+	border-left: 1px solid #b1b1b1;
+}
+
+.table_blance tr td em {
+	color: #ff0000;
+}
+
+.table_blance tr:nth-child(even) {
+	background-color: #daecd4;
+}
+
+/*common list*/
+.cCommonList {
+	padding: 0 0.8em;
+	margin-bottom: 1em;
+	border-top: 0.5em solid #ececec;
+}
+/*cTit*/
+.cTit {
+	position: relative;
+	overflow: hidden;
+}
+
+.cTit h2 {
+	position: relative;
+	padding: 0.5em 0 0.5em 1.4em;
+	color: #333;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.cTit h2::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 1em;
+	height: 1em;
+	margin-top: -0.5em;
+	background: url(../img/icon_car2.png) no-repeat 0 0;
+}
+
+.cLookMore {
+	position: absolute;
+	font-size: 0.8em;
+	padding: 0.5em 0;
+	line-height: 2;
+	right: 0;
+	top: 0;
+	color: #ff2424;
+}
+/*cListScroll*/
+.cListScroll {
+	overflow: hidden;
+}
+
+.cListScroll .cSCList {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+.cListScroll .cSCList ul {
+	position: relative;
+	float: left;
+	padding: 0;
+}
+
+.cListScroll .cSCList li {
+	position: relative;
+	float: left;
+	padding: 1em 0 0;
+	border-bottom: none;
+}
+
+.cListScroll .cSCList li .pic {
+	overflow: hidden;
+	border: 1px solid #e0e0e0;
+	width: 3.57em;
+	height: 3.57em;
+}
+
+.cListScroll .cSCList li .txt {
+	width: 6em;
+}
+
+.cListScroll .cSCList li .col {
+	float: left;
+	width: 50%;
+}
+/*cCommonList_handler*/
+.cCommonList_handler {
+	position: absolute;
+	text-align: center;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.cCommonList_handler span {
+	display: inline-block;
+	margin: 0 0.3em;
+	width: 0.6em;
+	height: 0.6em;
+	background-color: #d8d8d8;
+}
+
+.cCommonList_handler span.swiper-visible-switch,.cCommonList_handler span.swiper-active-switch,.cCommonList_handler span.cur
+	{
+	background-color: #1fadff;
+}
+
+/*cClearCar*/
+.cClearCar h2 {
+	font-size: 1.2em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.cClearCar .btnWrap {
+	overflow: hidden;
+}
+
+.cClearCar .btnWrap a {
+	width: 47%;
+	padding: 0.4em 0;
+}
+
+.cClearCar .btnWrap .cBtnGrayMod {
+	float: right;
+}
+
+.cClearCar .btnWrap .cBtnRedMod {
+	float: left;
+}
+
+.cListNull {
+	padding: 3em;
+	color: #ccc;
+	text-align: center;
+}
+
+/*city list*/
+.cCurrentCity {
+	padding-top: 0.8em;
+}
+
+.cCurrentCity .cCitySel {
+	margin-bottom: 0.8em;
+}
+
+.cBtnCurCity {
+	display: inline-block;
+	margin-left: 1em;
+	padding: 0.5em 2em;
+	color: #fff;
+	background-color: #65a044;
+}
+
+.cCityListWrap {
+	padding-top: 0.8em;
+}
+
+.cCitySel {
+	padding: 0.5em 0.5em 0.5em 2em;
+	background: #efefef url(../img/icon_geo.png) no-repeat 0.5em center;
+	color: #9a9a9a;
+	border-bottom: 1px solid #dfdfe0;
+	border-top: 1px solid #dfdfe0;
+}
+
+.cCitySel {
+	-webkit-background-size: 1.5em 1.5em;
+	background-size: 1.5em 1.5em;
+}
+
+.cCityList li {
+	border-bottom: 1px solid #dfdfe0;
+}
+
+.cCityList a {
+	position: relative;
+	display: block;
+	color: #333333;
+	font-size: 1.14em;
+	padding: 0.8em;
+}
+
+.cCityList a::after {
+	content: '';
+	position: absolute;
+	right: 1em;
+	top: 50%;
+	margin-top: -0.4em;
+	width: 0.8em;
+	height: 0.8em;
+	border-bottom: 0.15em solid #bababa;
+	border-left: 0.15em solid #bababa;
+}
+
+.cCityList a:active {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+/**************************************
+background-size contain
+**************************************/
+.cLoginBg {
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+/**************************************
+background-size 100% 100%
+**************************************/
+.cMenu_add_goods,.cQuickGuid .cBtnRedMod,.cQuickGuid .guide,.cTit h2::before,.cSCList .li .txt .d2 span,.cProgress .allstep1 .step1::before,.cProgress .allstep2 .step2::before,.cProgress .allstep3 .step3::before,.cProgress .allstep4 .step3::after,.cSearch::after,.cMyMenu .dd1 a::before,.cMyMenu .dd2 a::before,.cMyMenu .dd3 a::before,.cMyMenu .dd4 a::before,.cMyMenu .dd5 a::before,.cMyMenu .dd6 a::before,.cMyMenu .dd_ye a::before,.cMyMenu .dd_geo a::before,.cMyMenu .dd_tel a::before,.cMyMenu .dd_quickbuy a::before,.cFixedFoot h2::before,.cBtnBuy,.cSlogo,.cGoTop,.cDdList li .detail,.cUlPass .cParent::before,.cRegister .tips::before,.cIndexLogo,.cUlLogin .user::after,.cUlLogin .pass::after
+	{
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+/**************************************
+elements centerX, centerY
+**************************************/
+.cNoLoginTip span,.cAddType span,.cJsList li .detail span,.cFixedPopCon,.centerXY
+	{
+	-webkit-transform: translate(-50%, -50%) translateZ(0);
+	-moz-transform: translate(-50%, -50%) translateZ(0);
+	-ms-transform: translate(-50%, -50%) translateZ(0);
+	-o-transform: translate(-50%, -50%) translateZ(0);
+	transform: translate(-50%, -50%) translateZ(0);
+}
+
+/**************************************
+elements centerX
+**************************************/
+.cProgress .pro .text {
+	-webkit-transform: translate(-50%, 0) translateZ(0);
+	-moz-transform: translate(-50%, 0) translateZ(0);
+	-ms-transform: translate(-50%, 0) translateZ(0);
+	-o-transform: translate(-50%, 0) translateZ(0);
+	transform: translate(-50%, 0) translateZ(0);
+}
+
+/**************************************
+elements centerY
+**************************************/
+.cMyMenu .new,.cProgress .pro .step3::after,.cProgress .pro .step::before,.cUlTel .short img,.cFixedFoot .cNextStep,.cFixedFoot .cCheckMore,.cFixedFoot h2,.cFixedFoot h2::before,
+	/*.cScroller,*/ .cFixedHead .cSlogo,.cJsList li .m::before,.cBuyType .typeList td div::before,.cUlPass .cParent::before,.cUlPass li input[type="button"],.cRegister .tips::before,.cFixedHead .btnRet,.centerY
+	{
+	-webkit-transform: translate(0, -50%) translateZ(0);
+	-moz-transform: translate(0, -50%) translateZ(0);
+	-ms-transform: translate(0, -50%) translateZ(0);
+	-o-transform: translate(0, -50%) translateZ(0);
+	transform: translate(0, -50%) translateZ(0);
+}
+
+/**************************************
+rotate -45deg
+**************************************/
+.categoryTit span::after,.cBuyConf li div::after,.cDel::before,.cDel1::before,.cFixedClosed::after,.cBuyType .tit::after,.cUlPass .selectBox::after,.cFixedHead .btnRet::before
+	{
+	-webkit-transform: rotate(-45deg) translateZ(0);
+	-moz-transform: rotate(-45deg) translateZ(0);
+	-ms-transform: rotate(-45deg) translateZ(0);
+	-o-transform: rotate(-45deg) translateZ(0);
+	transform: rotate(-45deg) translateZ(0);
+}
+
+/**************************************
+rotate -225deg
+**************************************/
+.categoryTit .cur::after,.cBuyType .titShow::after {
+	-webkit-transform: rotate(-225deg) translateZ(0);
+	-moz-transform: rotate(-225deg) translateZ(0);
+	-ms-transform: rotate(-225deg) translateZ(0);
+	-o-transform: rotate(-225deg) translateZ(0);
+	transform: rotate(-225deg) translateZ(0);
+}
+
+/**************************************
+rotate -135deg
+**************************************/
+.cCityList a::after,.cFixedClosed::before,.cDel1::after,.cDel::after {
+	-webkit-transform: rotate(-135deg) translateZ(0);
+	-moz-transform: rotate(-135deg) translateZ(0);
+	-ms-transform: rotate(-135deg) translateZ(0);
+	-o-transform: rotate(-135deg) translateZ(0);
+	transform: rotate(-135deg) translateZ(0);
+}
+
+/**************************************
+transition 0.2s
+**************************************/
+.categoryTit span::after,.cFixedMenuBox,.cFixedMenuBoxB,.cFixedMenu,.cFixedMenuIng,.cMenu .cur a,.cBuyType .tit::after,.cBuyType .titShow::after,.cSearchIng
+	{
+	-webkit-transition: 0.2s all ease;
+	-moz-transition: 0.2s all ease;
+	transition: 0.2s all ease;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	perspective: 1000;
+}
+
+/**************************************
+transition 0.3s
+**************************************/
+.XXXX {
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	transition: 0.3s all ease;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	perspective: 1000;
+}
+
+/**************************************
+transition 0.6s
+**************************************/
+.cMenu .cur a {
+	-webkit-transition: 0.6s all ease;
+	-moz-transition: 0.6s all ease;
+	transition: 0.6s all ease;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	perspective: 1000;
+}
+
+/**************************************
+border-radius: 1em;
+**************************************/
+.cMyMenu .new,.cBalance,.cMenu .cur a {
+	-webkit-border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+}
+/**************************************
+border-radius: 0.3em;
+**************************************/
+.cBtnCurCity,.cListScroll .cSCList li .pic,.cRemarkBuy textarea,.cRemarkBuy input,.cBtnRemark,.cSearch,.cAddType,.cScroller,.cNextStep,.cCheckMore,.cScroller::after,.cBtnNum,.cBtnBuy,.cBtnRedMod,.cBtnGrayMod,.cRegConif,.cAddTypeLink,.cBtnReg1,.cBtnLog,.cBtnReg
+	{
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
+}
+
+/**************************************
+border radius 100%
+**************************************/
+.cHui,.cQuickMenu li span,.cCommonList_handler span,.cProgress .pro .step3::after,.cProgress .pro .step::before,.cMyMenu dt .pic,.cMyMenu dt .pic img,.cDel,.cDel1,.cDdList li .detail
+	{
+	-webkit-border-radius: 200%;
+	-moz-border-radius: 200%;
+	border-radius: 200%;
+}
+
+/**************************************
+border-radius: 1em;
+**************************************/
+/*.cMenu .cur a{
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}*/
+
+/**************************************
+translateX -100%;
+**************************************/
+.cMenuOff {
+	-webkit-transform: translateX(-150%) translateZ(0);
+	-moz-transform: translateX(-150%) translateZ(0);
+	transform: translateX(-150%) translateZ(0);
+}
+/**************************************
+translateX 0;
+**************************************/
+.cMenuOn {
+	-webkit-transform: translateX(0) translateZ(0);
+	-moz-transform: translateX(0) translateZ(0);
+	transform: translateX(0) translateZ(0);
+}
+
+@media screen and (min-width: 320px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+@media screen and (min-width: 480px) {
+	body {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	body {
+		font-size: 22px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	body {
+		font-size: 26px;
+	}
+	/*.cLoginBg{ background-image: url(../img/cLoginBg-big.jpg);}*/
+	.cIndexLogo {
+		margin: 30% auto 2em;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	body {
+		font-size: 22px;
+	}
+	.cIndexLogo {
+		margin: 10% auto 2em;
+	}
+	/*.cLoginBg{ background-image: url(../img/cLoginBg-big.jpg);}*/
+	.cSCList .ulbd {
+		overflow: hidden;
+	}
+	.cSCList .li {
+		float: left;
+		width: 46%;
+		height: 5.5em;
+		padding-left: 4%;
+		zoom: 1;
+		border-bottom: 1px solid #e8e8e8;
+		position: relative;
+		bottom: -1px;
+	}
+	.cSCList .li:nth-of-type(odd) {
+		padding-right: 4%;
+		padding-left: 0;
+	}
+	.cSCList .li:nth-of-type(even) {
+		padding-left: 4%;
+	}
+	.cSCList .li:nth-of-type(even) .cDel1,.cSCList .li:nth-of-type(even) .cDel
+		{
+		left: 8%;
+	}
+	.cSCList .li:nth-of-type(odd) .txt {
+		width: 11.32em;
+	}
+	.cSCList .li:nth-of-type(even) .txt {
+		width: 9.5em;
+	}
+	.cSCList .li .txt h3 {
+		max-height: 4.3em;
+		overflow: hidden;
+	}
+	.cSCList .li .txt .d1 {
+		max-height: 3em;
+		overflow: hidden;
+	}
+	.cListScroll .cSCList .li:nth-of-type(odd),.cListScroll .cSCList .li:nth-of-type(even)
+		{
+		border-bottom: none;
+		height: auto;
+		padding: 1em 0;
+	}
+}

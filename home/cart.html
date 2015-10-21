@@ -1,0 +1,586 @@
+<!doctype html>
+<html>
+<head>
+    <title>禾乐家-购物车</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="apple-mobile-web-app-title" content="锦绣生鲜">
+    <link rel="shortcut icon" sizes="16x16" href="../resource/img/icon-16x16.png">
+    <link rel="shortcut icon" sizes="196x196" href="../resource/img/icon-196x196.png">
+    <link rel="apple-touch-icon-precomposed" href="../resource/img/icon-152x152.png">
+    <link type="text/css" rel="stylesheet" href="../resource/css/base.css">
+    <link rel="stylesheet" type="text/css" href="../resource/css/addtohomescreen.css">
+    <link type="text/css" rel="stylesheet" href="../resource/css/common.css">
+    <script src="../resource/js/src/jquery-1.7.2.min.js"></script>
+    
+    <style type="text/css">
+    	#cBtnConif {
+    	  float: right;
+		  width: 6.875rem;
+		  height: 1.875rem;
+		  padding: 0px;
+		  border: .0625rem solid #D62D57;
+		  border-radius: 6.25rem;
+		  font-size: .9375rem;
+		  font-weight: 700;
+		  color: #FFF;
+		  text-align: center;
+		  background: #ED145B;
+		}
+	</style>
+</head>
+
+<body>
+    <div id="cFixedLoading" class="cFixedLoading" style="display: none"></div>
+    <div class="cFixedHeadTmp"></div>
+    <div class="cFixedHead">
+        <h1>购物车</h1>
+        <a id="back" class="return-btn" href="javascript:history.back()"><img src="https://secure1.jmstatic.com/static_passport/dist/20150902_2/touch/login_series/images/NavButtonBack.png" class="return"></a>
+        <a id="clearAll" href="javascript:;" class="btnR clearAll">清空</a>
+    </div>
+    <!-- cFixedHead E -->
+
+    <div id="cSCList" class="cSCList">
+        <h1 class="cSCType">禾乐家</h1>
+		<ul id="cartListSign" class="ulbd clearfix cart-deals-list">
+			<li>
+				<a class="product-img" href="#">
+					<img alt="" src="http://110.172.215.228:8800/Upload/Shop/Images/ProductThumbs/20150615/T50x65_201506152046447566652.jpg">
+				</a>
+				<div class="clear cart-info">
+					<div class="cart-title clear">
+						<div class="info-left fl">
+							<div class="main-title new-cart-title">
+								菠菜/有机食品/新鲜采摘
+							</div>
+							<div class="sub-title new-cart-title">
+								<div class="fl">￥<span class="price-s">1.4</span>/斤</div>
+								<div class="fr">总价: ￥<span class="total-this">1.4</span></div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="cart-bar">
+						<div class="num-count fl">
+							<a class="btn-sub  fl"></a>
+							<input type="text" name="item-quantity" value="1" 
+								class="show-count quantity fl" readonly="readonly" data-price="39.00" data-restriction="0">
+							<a class="btn-add btn-add-select fl"></a>
+						</div>
+					</div>
+					
+					<a class="cart-del"></a>
+			</li>
+			
+			<li>
+				<a class="product-img" href="#">
+					<img alt="" src="http://110.172.215.228:8800/Upload/Shop/Images/ProductThumbs/20150728/T50x65_201507281318565538750.jpg">
+				</a>
+				<div class="clear cart-info">
+					<div class="cart-title clear">
+						<div class="info-left">
+							<div class="main-title new-cart-title">
+								香菜/绿色食品/斤
+							</div>
+							<div class="sub-title new-cart-title">
+								<div class="fl">￥<span class="price-s">2.6</span>/斤</div>
+								<div class="fr">总价: ￥<span class="total-this">2.6</span></div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="cart-bar">
+						<div class="num-count fl">
+							<a class="btn-sub  fl"></a>
+							<input type="text" name="item-quantity" value="1" 
+								class="show-count quantity fl" readonly="readonly" data-price="39.00" data-restriction="0">
+							<a class="btn-add btn-add-select fl"></a>
+						</div>
+					</div>
+					<a class="cart-del"></a>
+			</li>
+		
+		</ul>
+    </div>
+    
+    <a id="cAddType" class="cAddType" href="javascript:;"><span>新品<br>预订</span></a>
+    <div class="cFixedFoot">
+        <div class="detail2">
+            <p class="p2">合计：<strong id="cPriceTotal">￥<span id="cartTotalPriceSign">4.0</span></strong></p>
+            <p id="cTips" class="p3" style="display: block">
+                <!--低于100元<br>加收30元运费-->
+            </p>
+        </div>
+        <input id="cBtnConif" class="cNextStep" type="button" value="确认下单">
+    </div>
+    <!-- cFixedFoot E -->
+    <div id="cFixedMenuBox" class="cFixedMenuBox cFixedMenuBoxC">
+        <div id="cFixedMenu" class="cFixedMenu cMenuOff" style="height: 90%; left: 10%;">
+            <div class="cAddSCType">
+                <h2>新品预定</h2>
+                <dl class="scList">
+                    <dt>
+                        <input id="cPM" type="text" placeholder="品名">
+                    </dt>
+                    <dd>
+                        <input id="cGG" type="text" placeholder="规格">
+                    </dd>
+                    <dd>
+                        <input id="cSL" type="tel" placeholder="数量">
+                    </dd>
+                    <dd>
+                        <textarea id="cMS" placeholder="说明" style="min-height: 2em"></textarea>
+                    </dd>
+                    <dd>
+                        <p class="tips">新品未采购过，当日配送中可能配送不到，带来不便请谅解，采购小哥辛勤的帮您寻找中，结果尽快回复您。</p>
+                    </dd>
+                </dl>
+                <input id="cBtnMS1" type="button" class="cRegConif" value="确认">
+            </div>
+            <a id="cFixedClosed" class="cFixedClosed" href="javascript:;">关闭</a>
+        </div>
+    </div>
+    <!-- cFixedMyMenu E -->
+    <!-- cFixedMenuBox E -->
+    <div id="cScroller" class="cScroller">
+        <ul>
+            <li class="end">1</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+            <li>32</li>
+            <li>33</li>
+            <li>34</li>
+            <li>35</li>
+            <li>36</li>
+            <li>37</li>
+            <li>38</li>
+            <li>39</li>
+            <li>40</li>
+            <li>41</li>
+            <li>42</li>
+            <li>43</li>
+            <li>44</li>
+            <li>45</li>
+            <li>46</li>
+            <li>47</li>
+            <li>48</li>
+            <li>49</li>
+            <li>50</li>
+            <li>51</li>
+            <li>52</li>
+            <li>53</li>
+            <li>54</li>
+            <li>55</li>
+            <li>56</li>
+            <li>57</li>
+            <li>58</li>
+            <li>59</li>
+            <li>60</li>
+            <li>61</li>
+            <li>62</li>
+            <li>63</li>
+            <li>64</li>
+            <li>65</li>
+            <li>66</li>
+            <li>67</li>
+            <li>68</li>
+            <li>69</li>
+            <li>70</li>
+            <li>71</li>
+            <li>72</li>
+            <li>73</li>
+            <li>74</li>
+            <li>75</li>
+            <li>76</li>
+            <li>77</li>
+            <li>78</li>
+            <li>79</li>
+            <li>80</li>
+            <li>81</li>
+            <li>82</li>
+            <li>83</li>
+            <li>84</li>
+            <li>85</li>
+            <li>86</li>
+            <li>87</li>
+            <li>88</li>
+            <li>89</li>
+            <li>90</li>
+            <li>91</li>
+            <li>92</li>
+            <li>93</li>
+            <li>94</li>
+            <li>95</li>
+            <li>96</li>
+            <li>97</li>
+            <li>98</li>
+            <li>99</li>
+            <li>100</li>
+            <li>101</li>
+            <li>102</li>
+            <li>103</li>
+            <li>104</li>
+            <li>105</li>
+            <li>106</li>
+            <li>107</li>
+            <li>108</li>
+            <li>109</li>
+            <li>110</li>
+            <li>111</li>
+            <li>112</li>
+            <li>113</li>
+            <li>114</li>
+            <li>115</li>
+            <li>116</li>
+            <li>117</li>
+            <li>118</li>
+            <li>119</li>
+            <li>120</li>
+            <li>121</li>
+            <li>122</li>
+            <li>123</li>
+            <li>124</li>
+            <li>125</li>
+            <li>126</li>
+            <li>127</li>
+            <li>128</li>
+            <li>129</li>
+            <li>130</li>
+            <li>131</li>
+            <li>132</li>
+            <li>133</li>
+            <li>134</li>
+            <li>135</li>
+            <li>136</li>
+            <li>137</li>
+            <li>138</li>
+            <li>139</li>
+            <li>140</li>
+            <li>141</li>
+            <li>142</li>
+            <li>143</li>
+            <li>144</li>
+            <li>145</li>
+            <li>146</li>
+            <li>147</li>
+            <li>148</li>
+            <li>149</li>
+            <li>150</li>
+            <li>151</li>
+            <li>152</li>
+            <li>153</li>
+            <li>154</li>
+            <li>155</li>
+            <li>156</li>
+            <li>157</li>
+            <li>158</li>
+            <li>159</li>
+            <li>160</li>
+            <li>161</li>
+            <li>162</li>
+            <li>163</li>
+            <li>164</li>
+            <li>165</li>
+            <li>166</li>
+            <li>167</li>
+            <li>168</li>
+            <li>169</li>
+            <li>170</li>
+            <li>171</li>
+            <li>172</li>
+            <li>173</li>
+            <li>174</li>
+            <li>175</li>
+            <li>176</li>
+            <li>177</li>
+            <li>178</li>
+            <li>179</li>
+            <li>180</li>
+            <li>181</li>
+            <li>182</li>
+            <li>183</li>
+            <li>184</li>
+            <li>185</li>
+            <li>186</li>
+            <li>187</li>
+            <li>188</li>
+            <li>189</li>
+            <li>190</li>
+            <li>191</li>
+            <li>192</li>
+            <li>193</li>
+            <li>194</li>
+            <li>195</li>
+            <li>196</li>
+            <li>197</li>
+            <li>198</li>
+            <li>199</li>
+            <li>200</li>
+            <li>201</li>
+            <li>202</li>
+            <li>203</li>
+            <li>204</li>
+            <li>205</li>
+            <li>206</li>
+            <li>207</li>
+            <li>208</li>
+            <li>209</li>
+            <li>210</li>
+            <li>211</li>
+            <li>212</li>
+            <li>213</li>
+            <li>214</li>
+            <li>215</li>
+            <li>216</li>
+            <li>217</li>
+            <li>218</li>
+            <li>219</li>
+            <li>220</li>
+            <li>221</li>
+            <li>222</li>
+            <li>223</li>
+            <li>224</li>
+            <li>225</li>
+            <li>226</li>
+            <li>227</li>
+            <li>228</li>
+            <li>229</li>
+            <li>230</li>
+            <li>231</li>
+            <li>232</li>
+            <li>233</li>
+            <li>234</li>
+            <li>235</li>
+            <li>236</li>
+            <li>237</li>
+            <li>238</li>
+            <li>239</li>
+            <li>240</li>
+            <li>241</li>
+            <li>242</li>
+            <li>243</li>
+            <li>244</li>
+            <li>245</li>
+            <li>246</li>
+            <li>247</li>
+            <li>248</li>
+            <li>249</li>
+            <li>250</li>
+            <li>251</li>
+            <li>252</li>
+            <li>253</li>
+            <li>254</li>
+            <li>255</li>
+            <li>256</li>
+            <li>257</li>
+            <li>258</li>
+            <li>259</li>
+            <li>260</li>
+            <li>261</li>
+            <li>262</li>
+            <li>263</li>
+            <li>264</li>
+            <li>265</li>
+            <li>266</li>
+            <li>267</li>
+            <li>268</li>
+            <li>269</li>
+            <li>270</li>
+            <li>271</li>
+            <li>272</li>
+            <li>273</li>
+            <li>274</li>
+            <li>275</li>
+            <li>276</li>
+            <li>277</li>
+            <li>278</li>
+            <li>279</li>
+            <li>280</li>
+            <li>281</li>
+            <li>282</li>
+            <li>283</li>
+            <li>284</li>
+            <li>285</li>
+            <li>286</li>
+            <li>287</li>
+            <li>288</li>
+            <li>289</li>
+            <li>290</li>
+            <li>291</li>
+            <li>292</li>
+            <li>293</li>
+            <li>294</li>
+            <li>295</li>
+            <li>296</li>
+            <li>297</li>
+            <li>298</li>
+            <li>299</li>
+            <li class="end">300</li>
+        </ul>
+    </div>
+    <!-- cScroller E -->
+
+    <!-- cFixedFoot E -->
+    <div id="cFixedConfirm" class="cFixedPop" style="display: none;">
+        <div class="cFixedPopCon">
+            <div class="cJcTop"></div>
+            <!-- cJcTop E -->
+            <div id="cClearCar" class="cClearCar">
+                <h2>您确定清空购物车？</h2>
+                <div class="btnWrap"><a id="clearCart" href="javascript:;" class="cBtnRedMod">确定</a> <a href="javascript:;" class="cBtnGrayMod">取消</a> </div>
+            </div>
+            <!-- cClearCar E -->
+            <div class="cJcBot"></div>
+            <!-- cJcBot E -->
+        </div>
+        <!-- cFixedPopCon E -->
+    </div>
+    <!-- cFixedConfirm E -->
+    <div id="cFixedPop" class="cFixedPop">
+        <div class="cFixedPopCon">
+            <div class="cJcTop"></div>
+            <a id="cFixedClosed1" class="cFixedClosed" href="javascript:;">关闭</a>
+            <!-- cJcTop E -->
+            <div class="cBuyConf">
+                <ul>
+                    <li class="clearfix"><span class="tit">购买数量：</span><em id="cTotalS">0</em>个 </li>
+                    <!--<li class="clearfix"><span class="tit">若您00:20之前下单</span></li>
+                    <li class="clearfix"><span class="tit">次日上午8:00-10:30分送到</span></li>-->
+                    <li class="clearfix"><span class="tit">联系人：</span><em id="cName"></em> </li>
+                    <li class="clearfix"><span class="tit">联系方式：</span><em id="cPhone"></em> </li>
+                    <li class="clearfix"><span class="tit">送货地址：</span><em id="cAdd"></em> </li>
+                    <li class="clearfix"><span class="tit">详细地址：</span><em id="cAddInfo"></em> </li>
+                    <li class="cjs">
+                        <span class="tit">送货时间：</span>
+                        <select id="deliverGoodsTimeSelect">
+                            <option value="" selected="selected">请选择送货时间</option> 
+                            <option value="配送时间:8点到9点;  ">　8点到9点　</option>
+                            <option value="配送时间:9点到10点;  ">　9点到10点　</option>
+                            <option value="配送时间:10点到11点;  ">　10点到11点　</option>
+                            <option value="配送时间:14点到15点;  ">　14点到15点　</option>
+                            <option value="配送时间:15点到16点;  ">　15点到16点　</option>
+                            <option value="配送时间:16点到17点;  ">　16点到17点　</option>
+                        </select>
+                    </li>
+                    <li class="cjs"><span class="tit">备注：</span></li>
+                    <li class="cjs">
+                        <textarea id="remarkTxt" style="width: 100%; border: 1px black solid; height: 40px;"></textarea></li>
+                    <li class="cjs"><span class="tit">支付方式：</span><input id="rZX" value="-1" name="type" type="radio" /><label for="rZX">在线支付</label>
+                        <input id="DF" value="1" name="type" checked="checked" type="radio" /><label for="DF">货到付款</label>
+                    </li>
+                    <li class="cjs" id="zfType" hidden="hidden"><span class="tit">支付类型：</span><input id="WX" name="type2" value="2" type="radio" checked="checked" /><label for="WX">微信支付</label>
+                        <input id="YE" name="type2" value="3" type="radio" /><label for="YE">账户余额</label>
+                    </li>
+                </ul>
+                <p class="cjs">总计<em id="cPriceTotal1">￥<span id="totalPriceSign">123</span></em>元</p>
+                <input id="cBtnOrder" type="button" class="cRegConif" value="确定">
+            </div>
+            <!-- cRegFixedPop E -->
+            <div class="cJcBot"></div>
+            <!-- cJcBot E -->
+        </div>
+        <!-- cFixedPopCon E -->
+    </div>
+    <!-- cFixedPopCon E -->
+    <!-- cScroller E -->
+    <input type="hidden" id='uid' value='BJ_3313'>
+    <input type="hidden" id='c_page' value='cart'>
+    <input type="hidden" id='limit' value='100'>
+    <input type="hidden" id="appid" value="" />
+    <input type="hidden" id="rmid" value="" />
+
+    <script type="text/javascript" src="../resource/js/src/seajs/1.3.1/sea.js"></script>
+    <script type="text/javascript">
+		seajs.use("../resource/js/src/app/ln/c_buy_car.js");
+		
+		// 数量减
+		$('.btn-sub').click(function(){
+			var $e = $(this),
+				$input = $e.siblings('.show-count');
+			if($e.hasClass('btn-sub-select')){
+				var cNum = Number($input.val())-1,
+					$par = $input.parents('.cart-info');
+				// 设置当前数量
+				$input.val(cNum);
+				// 设置总价
+				var price = Number($par.find('.price-s').text());
+				$par.find('.total-this').text((cNum*price).toFixed(1));
+				// 设置购物车总价
+				var countPrice = 0;
+				$('#cartListSign .total-this').each(function(i,e){
+					countPrice += Number($(e).text());
+				});
+				$('#cartTotalPriceSign').text(countPrice.toFixed(1));
+				
+				if($input.val()=='1'){
+					$e.removeClass('btn-sub-select');
+				}
+			}
+		});
+		
+		// 数量加
+		$('.btn-add').click(function(){
+			var $e = $(this),
+				$input = $e.siblings('.show-count');
+			if($e.hasClass('btn-add-select')){
+				var cNum = Number($input.val())+1,
+					$par = $input.parents('.cart-info');
+				// 设置当前数量
+				$input.val(cNum);
+				// 设置总价
+				var price = Number($par.find('.price-s').text());
+				$par.find('.total-this').text((cNum*price).toFixed(1));
+				// 设置购物车总价
+				var countPrice = 0;
+				$('#cartListSign .total-this').each(function(i,e){
+					countPrice += Number($(e).text());
+				});
+				$('#cartTotalPriceSign').text(countPrice.toFixed(1));
+				
+				if($input.val()=='2'){
+					$e.siblings('.btn-sub').addClass('btn-sub-select');
+				}
+			}
+		});
+		
+		
+    </script>
+    <script src="../resource/js/src/script/cart.js"></script>
+</body>
+</html>
