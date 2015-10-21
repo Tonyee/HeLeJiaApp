@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>禾乐家 | 登录</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="full-screen" content="yes">
+    <link type="text/css" rel="stylesheet" href="https://secure4.jmstatic.com/static_passport/dist/20150902_2/touch/login_series/css/login_registered.css?v=6" media="screen"  charset="utf-8" />
+    <script src="https://secure2.jmstatic.com/static_passport/dist/20150902_2/touch/login_series/js/zepto.js?v=6"></script>
+    <script src="https://secure1.jmstatic.com/static_passport/dist/20150902_2/touch/login_series/js/jmtouch_login.js?v=6"></script>
+    <meta name='apple-touch-fullscreen' content='yes'>
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+</head>
+<body>
+    <style>
+    .views {
+      background: #DF207A;
+      /* box-shadow: 0 0 5px #DF207A; */
+    }
+    section .theme {
+      text-shadow: 0 1px 1px #DF207A;
+    }
+    section .theme {
+      letter-spacing: 1px;
+    }
+    .long_button {
+      background: #DF207A;
+    }
+     .gt_ads_holder_top {
+       display: none;
+     }
+     .gt_ads_holder {
+       border: 0;
+       background: none;
+       padding: 0 15px 2px 18px;
+     }
+     .gt_ajax_tip {
+       display: none;
+     }
+     .gt_bottom {
+       background: none;
+     }
+     .gt_holder {
+       padding: 5px 0;
+     }
+     .gt_ads_box {
+       top: 1px;
+     }
+     #geetest-wrap {
+       display: none;
+     }
+     #verify_code {
+       display: none;
+     }
+     #geetest-wrap {
+       height: 200px;
+     }
+    </style>
+    <div class="warper">
+                <section class="views">
+            <a id = "back" href="javascript:history.back()"><img src = "https://secure1.jmstatic.com/static_passport/dist/20150902_2/touch/login_series/images/NavButtonBack.png" class = "return"/></a>
+            <h1 class = "theme">登录</h1>
+            <a class="top_right" href="#">快速注册</a>
+        </section>
+                <form accept-charset="utf-8" method="post" action="/i/mobile/login?redirect=http%3A%2F%2Fm.jumei.com%2F" id="login">
+            <ul class = "new_lo">
+            <li>
+               <i class="input-icon"></i>
+               <span class="notice_div">
+                    <span class="email_notice" id ="deaccount"><span class="email_copy"></span><input class="notice_span" type="text" value="" name="houzhui" disabled/></span>
+                    <input type="text" name="email"  placeholder="请输入邮箱/用户名/手机号" value="" class="email_input" id = "account" alertname="用户名" />
+               </span>     
+            </li>
+            <li>
+                <i class="input-icon user-password"></i>
+                <input type="password" name="password" placeholder="请输入密码" id="password" alertname="密码"/>
+            </li>
+            <div id="geetest-wrap">
+                <script async type="text/javascript" src="https://api.geetest.com/get.php?gt=064db254049f316e75b404fd9bb4f54e&product=embed"></script>
+            </div>            
+            <!-- <li style='display:none' id ='verify_code'> -->
+            <li id="verify_code">
+               <i class="input-icon user-yanzheng"></i>
+               <input type="text"  maxlength="4" name="hash_code" class="reg-input" id="signup-hashcode-confirm" placeholder = "请输入验证码" alertname="验证码" />
+               <img id="code" src="/i/account/hash_code?from=login&1445267946" onclick="change_code()" class = "check_code" />
+            </li>
+            </ul>
+            <div class = "login_bar">
+                <a href="#" class="pull_left">找回密码</a><!-- <input type="checkbox" checked="checked" name="auto_login" id = "login_auto_login">&nbsp;<label for="login_auto_login">下次自动登录</label> -->
+                <span>30天内自动登录</span>   
+                <input type = "button" class="long_button loglin_button" id="ga_login" value = "立即登录">
+            </div>
+        </form>
+        <div class="other-login-outer">
+            <div class="other-login">
+                <span class="other-title">直接使用合作账号登录</span>
+            </div>
+            <ul class="coo_login clearfix">
+<!--                <li><a href="/i/extconnect/?site_name=weixin&amp;plat_form=touch&amp;redirect=http%253A%252F%252Fm.jumei.com%252F" class="coo_a coo_weixin"></a></li>-->
+                <li><a href="#" class="coo_a coo_qq"></a></li>
+<!--                <li><a href="/i/mobile/qq_error" class="coo_a coo_qq"></a></li>-->
+                <li><a href="#" class="coo_a coo_zhifubao"></a></li>
+                <li><a href="#" class="coo_a coo_xinlang"></a></li>
+                <li><a href="#" class="coo_a coo_baidu"></a></li>
+            </ul>
+        </div>
+        
+         <script type="text/javascript">
+            var GT_VERIFY = false;
+            var has_hash = false;
+            var exg = /^\S*\D\S*$/;
+            if (has_hash) {
+                showVerify();
+            }
+            function change_code(){
+                if (GT_VERIFY) {
+                    window.GT_DATA && GT_DATA.selector('.gt_refresh_button').click();
+                    window.GT_DATA = null;
+                } else {
+                    var d = new Date();
+                    var src = '/i/account/hash_code?from=login&'+d.getTime();
+                    document.getElementById('code').src=src;
+                }
+            }
+            $('#ga_login').click(function(e){
+                var can_submit = true;
+                $('.new_lo').find('input').not($('.notice_span')).each(function(){
+                    if($(this).parents('#verify_code').css('display')=='none'){
+                        return true;
+                    }
+                    if($(this).attr('alertname') && Jumei.str_trim($(this).val()) == ""){
+                        can_submit = false;
+                        alert("请输入"+$(this).attr('alertname'));
+                        return false;
+                    }
+                });
+                if(can_submit == false){
+                    return false;
+                }
+                if (has_hash && GT_VERIFY) {
+                    if (window.GT_DATA) {
+                    } else {
+                        alert('请拖动完成验证');
+                        can_submit = false;
+                        return false;
+                    }
+                }
+                if(can_submit == false){
+                    return false;
+                }
+                var post_data={
+                }
+                post_data.email = Jumei.str_trim($('#account').val());
+                post_data.password = Jumei.str_trim($('#password').val());
+                post_data.redirect = 'http%3A%2F%2Fm.jumei.com%2F';
+                /* if($('#verify_code').css('display') !='none'){ */
+                if(has_hash){
+                    if (GT_VERIFY) {
+                        // geetest
+                        post_data.challenge = GT_DATA.challenge;
+                        post_data.validate = GT_DATA.validate;
+                        post_data.seccode = GT_DATA.seccode;
+                    } else {
+                        post_data.hash_code = $('#signup-hashcode-confirm').val();
+                    }
+                }
+                Jumei.ajax('/i/mobile/ajax_login',post_data,'post',login_callback);
+                return false;
+            });
+            document.getElementById('account').onpropertychange = search_input_change;
+            document.getElementById('account').oninput = search_input_change;
+            $('#account').blur(function(){
+                $(this).prev().find('.notice_span').removeClass('show_notice');
+                if($(this).prev().find('.notice_span').val() == ''){
+                    return;
+                }
+                $(this).val($(this).val()+''+$(this).prev().find('.notice_span').val());
+                $(this).prev().find('.notice_span').val('');
+            });
+            function hideVerify() {
+                $('#verify_code').hide();
+                $('#geetest-wrap').hide();
+            }
+            function showVerify() {
+                hideVerify();
+                if (GT_VERIFY) {
+                    $('#geetest-wrap').show();
+                } else {
+                    $('#verify_code').show();
+                }
+            }
+            function login_callback(data){
+                GT_VERIFY = data.geetest;
+                has_hash = data.hash_code;
+                if(data.hash_code === true){
+                    showVerify();
+                } else if(data.hash_code === false){
+                    hideVerify();
+                }
+                if(data.status != 0){
+                   $('#signup-hashcode-confirm').val('');
+                    /* if ($('#verify_code').css('display') !='none'){ */
+                    if (has_hash){
+                        change_code();
+                    }
+                }
+                switch(data.status){
+                    case 0 :
+                        $.ajax({
+                            url:'/i/mobile/login_m',
+                            type:'get',
+                            dataType:'json'
+                        })
+                        window.location.href = data.redirect;
+                        break;
+                    case 1 :
+                        alert('验证码为空');
+                        break;
+                    case 2 :
+                        alert('图片验证码输入错误，请重新输入');
+                        break;
+                    case 3 :
+                        alert('账户不存在，请重新输入');
+                        break;
+                    case 4 :
+                        alert('用户名为空');
+                        break;
+                    case 5 :
+                        alert('账户或密码错误');
+                        break;
+                    case 6 :
+                        alert('密码为空');
+                        break;
+                    case 7 :
+                        alert('网络问题，请您重试');
+                        break;
+                    case 8 :
+                        alert('验证码错误');
+                        break;
+                    default :
+                        break;
+                        
+                }
+            }
+            window.gt_custom_ajax = function(result, selector, message) {
+                if(result) {
+                    window.GT_DATA = {};
+                    GT_DATA.challenge = selector(".geetest_challenge").value;
+                    GT_DATA.validate = selector(".geetest_validate").value;
+                    GT_DATA.seccode = selector(".geetest_seccode").value;
+                    GT_DATA.selector = selector;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
