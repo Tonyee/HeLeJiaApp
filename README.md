@@ -1,3 +1,3 @@
-# HeLeJiaApp
-HeLeJia Demo
+# 17ShoppingApp
+17Shopping Demo
 
